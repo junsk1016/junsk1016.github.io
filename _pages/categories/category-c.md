@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "C"
-permalink: /categories/python
+permalink: /categories/c
 author_profile: true
 toc: true
 ---
