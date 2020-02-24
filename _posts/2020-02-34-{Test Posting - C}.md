@@ -2,7 +2,7 @@
 layout: single
 title: "Test Posting - C"
 categories:
-  - c
+  - C
 tags:
   - jeykll
   - github
@@ -10,4 +10,4 @@ tags:
   - blog
 ---
 
-Category - C
+Category - C test
