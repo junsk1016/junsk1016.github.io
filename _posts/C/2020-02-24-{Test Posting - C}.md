@@ -8,6 +8,7 @@ tags:
   - github
   - Minimalmistakes
   - blog
+  - C
 ---
 
 Category - C test!

@@ -8,6 +8,7 @@ tags:
   - github
   - Minimalmistakes
   - blog
+  - Python
 ---
 
 Category - PYTHON test!
