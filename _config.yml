@@ -32,7 +32,7 @@ words_per_minute         : 200
 comments:
   provider               : disqus
   disqus:
-    shortname            : https-junsk1016-github-io
+    shortname            : https-junsk1016-github-io-2
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
