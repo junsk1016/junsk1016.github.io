@@ -11,3 +11,20 @@ tags:
 ---
 
 Category - PYTHON test!
+
+```
+code
+```
+
+```yaml
+yaml code
+```
+
+```python
+import python
+```
+
+```c
+include <stdio.h>
+
+```
