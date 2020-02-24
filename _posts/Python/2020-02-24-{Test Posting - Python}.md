@@ -12,19 +12,18 @@ tags:
 
 Category - PYTHON test!
 
-```
-code
-```
+Example : Fibonacci Function
+'''python
+def Fibonacci_Function(number):
+  str = [0, 1]
+  a, b = 0, 1
+  i = 1
+  while i <= number:
+    a, b = b, a+b
+    str.append(b)
+    i = i + 1
+  return str
 
-```yaml
-yaml code
-```
-
-```python
-import python
-```
-
-```c
-include <stdio.h>
-
-```
+n = Fibonacci_Function(100)
+print(n)
+'''
