@@ -13,7 +13,8 @@ tags:
 Category - PYTHON test!
 
 Example : Fibonacci Function
-'''python
+
+```python
 def Fibonacci_Function(number):
   str = [0, 1]
   a, b = 0, 1
@@ -26,4 +27,4 @@ def Fibonacci_Function(number):
 
 n = Fibonacci_Function(100)
 print(n)
-'''
+```
