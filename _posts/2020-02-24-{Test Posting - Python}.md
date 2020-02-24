@@ -10,4 +10,4 @@ tags:
   - blog
 ---
 
-Category - PYTHON test
+Category - PYTHON test!
