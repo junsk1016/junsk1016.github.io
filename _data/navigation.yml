@@ -11,5 +11,7 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 docs:
-  - title: "PYTHON"
+  - title: "Python"
     url: "categories/python"
+  - title: "C"
+    url: "categories/c"
