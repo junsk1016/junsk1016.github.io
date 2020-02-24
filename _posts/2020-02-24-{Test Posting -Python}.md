@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Test Posting -Python"
+title: "Test Posting - Python"
 categories:
   - Python
 tags:

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Test Posting -C"
+title: "Test Posting - C"
 categories:
   - c
 tags:
