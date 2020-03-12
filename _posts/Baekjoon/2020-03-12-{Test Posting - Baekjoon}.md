@@ -4,11 +4,9 @@ title: "Test Posting - Baekjoon"
 categories:
   - Baekjoon
 tags:
-  - jeykll
   - github
-  - Minimalmistakes
   - blog
-  - C
+  - Baekjoon
 ---
 
 Category - Baekjoon test!
