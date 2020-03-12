@@ -15,3 +15,7 @@ docs:
     url: "categories/python"
   - title: "C"
     url: "categories/c"
+  - title: "Markdown"
+    url: "categories/markdown"
+  - title: "Baekjoon"
+    url: "categories/baekjoon"
