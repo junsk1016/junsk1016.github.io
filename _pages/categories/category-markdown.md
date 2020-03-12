@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "MARKDOWN"
+title: "Markdown"
 permalink: /categories/markdown
 author_profile: true
 toc: true

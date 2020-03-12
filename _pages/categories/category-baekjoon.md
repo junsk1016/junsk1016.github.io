@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "BAEKJOON"
+title: "Baekjoon"
 permalink: /categories/baekjoon
 author_profile: true
 toc: true
