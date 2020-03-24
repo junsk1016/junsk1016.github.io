@@ -32,3 +32,4 @@ int main(void)
   return 0;
 }
 ```
+입력으로 0이 들어올 때까지 입력한 모든 값을 더해주는 Example입니다.
