@@ -29,3 +29,5 @@ def Fibonacci_Function(number):
 n = Fibonacci_Function(100)
 print(n)
 ```
+
+피보나치 수열 예제입니다.
