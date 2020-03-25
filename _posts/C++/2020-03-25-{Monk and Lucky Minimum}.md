@@ -14,16 +14,18 @@ tags:
 
 ### 문제
 ---
-  Monk just purchased an array A having N integers. Monk is very superstitious. He calls the array A Lucky if the frequency of the minimum element is odd, otherwise he considers it Unlucky. Help Monk in finding out if the array is Lucky or not.
+  Monk just purchased an array A having N integers.  
+  Monk is very superstitious. He calls the array A Lucky if the frequency of the minimum element is odd, otherwise he considers it Unlucky.  
+  Help Monk in finding out if the array is Lucky or not.
 
 #### 입력
-First line consists of a single integer T denoting the number of test cases.
-First line of each test case consists of a single integer N denoting the size of array A.
-Second line of each test case consists of N space separated integers denoting the array A.
-Constraints:
-1 ≤ T ≤ 10
-1 ≤ M ≤ 10^5
-1 ≤ A[i] ≤ 10^9
+First line consists of a single integer T denoting the number of test cases.  
+First line of each test case consists of a single integer N denoting the size of array A.  
+Second line of each test case consists of N space separated integers denoting the array A.  
+Constraints:  
+1 ≤ T ≤ 10  
+1 ≤ M ≤ 10^5  
+1 ≤ A[i] ≤ 10^9  
 ```
 2
 5
