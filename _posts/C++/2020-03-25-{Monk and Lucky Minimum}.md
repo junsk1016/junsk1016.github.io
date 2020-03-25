@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "별 찍기-1 - 백준 알고리즘"
+title: "Monk and Lucky Minimun - Hackerearth"
 categories:
   - C++
 tags:
