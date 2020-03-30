@@ -44,5 +44,5 @@ Search Algorithm에는 linear search와 binary search가 있습니다.
  ```
 
  다음 포스팅에서 이를 활용한 백준 문제를 풀어보도록 하겠습니다.
- 
+
  ---
