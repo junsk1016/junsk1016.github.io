@@ -16,8 +16,7 @@ Search Algorithm에는 linear search와 binary search가 있습니다.
 1. Linear Search
  + 처음부터 하나씩 확인하는 방법
  + worst case : n 번 확인 (data가 n개 있을 때)
-
- 간단한 예제를 보겠습니다.
+ + 간단한 예제를 보겠습니다.
  ```c++
  int serarch(int a[], int v, int l, int r)
  {
@@ -31,8 +30,7 @@ Search Algorithm에는 linear search와 binary search가 있습니다.
 2. Binary Search
  + 조건 : 가지고 있는 Data를 크기대로 sorting하여 저장해야 함
  + linear search보다 빨리 찾을 수 있는 장점
-
- 간단한 예제를 보겠습니다.
+ + 간단한 예제를 보겠습니다.
  ```c++
  int serarch(int a[], int v, int l, int r)
  {
