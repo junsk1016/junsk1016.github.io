@@ -25,11 +25,11 @@ She is very excited by looking these questions. She decided to solve K questions
   + Next line contains N space separated integers denoting the scores Si of N questions.
   + Next Q lines contains a number K each, the number of questions she wants to solve.
 
-Constraints :
-1 <= N <= 10^5
-1 <= Q <= 10^5
-1 <= K <= N
-1 <= T_i, S_i <= 10^9
+Constraints :  
+1 <= N <= 10^5  
+1 <= Q <= 10^5  
+1 <= K <= N  
+1 <= T_i, S_i <= 10^9  
 ```
 5 2
 2 3 9 4 5
