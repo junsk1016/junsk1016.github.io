@@ -58,51 +58,37 @@ NO
 ### 정답
 ---
 ```c++
-#include<iostream>
-#include<vector>
-#include<algorithm>
-#include<cstdio>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-
-	int N = 0;
-	int Q = 0;
-
-	vector<int> v1;
-	vector<int> v2;
-
+	int N = 0, Q = 0;
+	int num = 0;
 	cin >> N >> Q;
-	v1.resize(N);
-	v2.resize(Q);
 
-	for (int i = 0; i < N; ++i)
+	vector<int> v;
+	v.resize(N);
+
+	for (int i = 0; i < N; i++)
 	{
-		cin >> v1[i];
+		cin >> v[i];
 	}
-	for (int i = 0; i < Q; ++i)
+	sort(v.begin(), v.end());
+	for (int i = 0; i < Q; i++)
 	{
-		cin >> v2[i];
-	}
-
-	sort(v1.begin(), v1.end());
-	int number = 0;
-
-	for (int i = 0; i < Q; ++i)
-	{
-		number = v2[i];
-		if (binary_search(v1.begin(), v1.end(), number))
-			printf("YES\n");
+		cin >> num;
+		if (binary_search(v.begin(), v.end(), num))
+			cout << "YES\n";
 		else
-			printf("NO\n");
+			cout << "NO\n";
 	}
-
 	return 0;
 }
+
 ```
 
 ---
