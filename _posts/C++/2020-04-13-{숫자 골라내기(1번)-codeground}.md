@@ -58,18 +58,16 @@ Case #1
 
 using namespace std;
 
-int Answer;
-
 int main(void)
 {
-	int T, test_case;
-	int number, N, i;
+	int T = 0, test_case = 0;
+	int number = 0, N = 0, i = 0;
 
 	cin >> T;
 
 	for (test_case = 0; test_case < T; test_case++)
 	{
-		Answer = 0;
+		int Answer = 0;
 
 		cin >> N;
 
@@ -79,11 +77,10 @@ int main(void)
 			Answer ^= number;
 		}
 
-		cout << "Case #" << T << "\n" << Answer << endl;
+		cout << "Case #" << test_case+1 << "\n" << Answer << endl;
 	}
 
 	return 0;
 }
-
 ```
 ---
