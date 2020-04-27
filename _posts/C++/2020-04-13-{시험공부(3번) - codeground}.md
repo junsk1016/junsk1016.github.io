@@ -52,39 +52,40 @@ Case #1
 ```c++
 #include <iostream>
 #include <algorithm>
+#include <cstdio>
 #include <vector>
 
 using namespace std;
 
-int main(void)
+int main()
 {
-	int T = 0, N = 0, K = 0;
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
 
+	int T = 0,N  = 0, K = 0;
 	cin >> T;
-
-	for (int i = 0; i < T; ++i)
+	for (int tc = 0; tc < T; tc++)
 	{
 		cin >> N >> K;
-		int sum = 0;
 		vector<int> v;
 		v.resize(N);
-
-		for (int j = 0; j < N; ++j)
+		for(int i = 0; i < N; i ++)
 		{
-			cin >> v[j];
+		    v[i] = 0;
 		}
-
+		for (int i = 0; i < N; i++)
+		{
+			cin >> v[i];
+		}
 		sort(v.begin(), v.end());
-		int k = N - 1;
-		for (int j = 0; j < K; ++j)
+		int sum = 0;
+		for (int i = 0; i < K; i++)
 		{
-			sum += v[k];
-			k--;
+			sum += v[N - 1 - i];
 		}
-		cout << "Case #" << T << "\n" << sum << endl;
-
+		cout << "Case #" << tc + 1 << '\n';
+		cout << sum << endl;;
 	}
-
 	return 0;
 }
 ```
