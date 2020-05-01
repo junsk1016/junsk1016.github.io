@@ -21,9 +21,9 @@ You are given an array A of size N, and Q queries to deal with. For each query, 
 The first line contains two integers, N and Q, denoting the size of array A and number of queries. The second line contains N space separated integers, denoting the array of elements Ai. The next Q lines contain a single integer X per line.  
 
 Constraints:  
-1 ≤ N,Q ≤ 10<sup>5  
-1 ≤ A_i ≤ 10<sup>9  
-1 ≤ X ≤ 10<sup>9  
+1 ≤ N,Q ≤ 10<sup>5</sup>  
+1 ≤ A<sub>i</sub> ≤ 10<sup>9</sup>  
+1 ≤ X ≤ 10<sup>9</sup>  
 ```
 5 10
 10 20 30 40 50

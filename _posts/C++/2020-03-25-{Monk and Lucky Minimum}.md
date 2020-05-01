@@ -24,9 +24,9 @@ First line consists of a single integer T denoting the number of test cases.
 First line of each test case consists of a single integer N denoting the size of array A.  
 Second line of each test case consists of N space separated integers denoting the array A.  
 Constraints:  
-1 ≤ T ≤ 10  
-1 ≤ M ≤ 1<sup>5  
-1 ≤ A[i] ≤ 10<sup>9  
+1 ≤ T ≤ 10   
+1 ≤ M ≤ 10<sup>5</sup>   
+1 ≤ A[i] ≤ 10<sup>9</sup>  
 ```
 2
 5
