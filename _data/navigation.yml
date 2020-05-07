@@ -19,3 +19,5 @@ docs:
     url: "categories/markdown"
   - title: "C++"
     url: "categories/c++"
+  - title: "Anaconda"
+    url: "categories/anaconda"
