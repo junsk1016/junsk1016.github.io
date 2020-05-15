@@ -13,4 +13,4 @@ tags:
 
 Category - Anaconda test!
 
-anaconda의 기본 사용법에 대해 정리할 예정입니다!
+anaconda 및 jupyter notebook 명령어에 대해 정리할 예정입니다!
