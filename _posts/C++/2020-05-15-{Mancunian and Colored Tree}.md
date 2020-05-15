@@ -35,7 +35,7 @@ Constraints:
 
 ### 출력
 ---
-Print N space-separated integers. The i<sup>th</sup> th integer is the vertex number of lowest ancestor of the <sup>th</sup> node which has the same color. If there is no such ancestor, print 1 for that node.  
+Print N space-separated integers. The i<sup>th</sup> th integer is the vertex number of lowest ancestor of the i<sup>th</sup> node which has the same color. If there is no such ancestor, print 1 for that node.  
 ```
 -1 -1 -1 1 3
 ```
