@@ -21,7 +21,7 @@ Each node of the tree is assigned a color (out of C possible colors). Being bore
 ### 입력
 ---
 The first line contains two integers N and C denoting the number of vertices in the tree and the number of possible colors.  
-The second line contains N - 1 integers. The i<sup>th</sup> integer denotes the parent of the 1 + 1<sup>th</sup> vertex.  
+The second line contains N - 1 integers. The i<sup>th</sup> integer denotes the parent of the (i + 1)<sup>th</sup> vertex.  
 The third line contains N integers, denoting the colors of the vertices. Each color lies between 1 and C inclusive.  
 Constraints:  
 1 ≤ N ≤ 100,000   
@@ -69,7 +69,7 @@ int main()
 
 	for (int i = 1; i <= N; i++)
 		cin >> tree[i].color;
-	//---------------------------------------------------------------------------
+
 	for (int i = 1; i <= N - 1; i++) // 마지막 한번 뺴고(띄어쓰기때문에)
 	{
 		int color = tree[i].color; // i 의 색깔
