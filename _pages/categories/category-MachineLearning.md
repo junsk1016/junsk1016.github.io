@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Markdown"
+title: "MachineLearning"
 permalink: /categories/MachineLearning
 author_profile: true
 toc: true

@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Markdown"
+title: "GAN"
 permalink: /categories/GAN
 author_profile: true
 toc: true
