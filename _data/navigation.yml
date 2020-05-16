@@ -21,3 +21,5 @@ docs:
     url: "categories/c++"
   - title: "Anaconda"
     url: "categories/anaconda"
+  - title: "GAN"
+    url: "categories/GAN"
