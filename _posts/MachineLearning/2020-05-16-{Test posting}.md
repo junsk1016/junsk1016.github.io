@@ -2,7 +2,7 @@
 layout: single
 title: "Test Posting - Machine Learning"
 categories:
-  - GAN
+  - MachineLearning
 tags:
   - jeykll
   - github
