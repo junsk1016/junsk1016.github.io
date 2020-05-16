@@ -23,5 +23,5 @@ docs:
     url: "categories/anaconda"
   - title: "GAN"
     url: "categories/GAN"
-  - title: "MachineLearning"
+  - title: "Machine Learning"
     url: "categories/MachineLearning"
