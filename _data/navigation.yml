@@ -27,3 +27,5 @@ docs:
     url: "categories/MachineLearning"
   - title: "Atom"
     url: "categories/atom"
+  - title: "Spyder"
+    url: "categories/spyder"
