@@ -75,13 +75,13 @@ int main()
 
 	for (int i = 0; i < N; i++)
 	{
-		cin >> v[i];
+		cin >> v[i];  // vector의 size만큼 입력받음
 	}
-	sort(v.begin(), v.end());
+	sort(v.begin(), v.end());  // 정렬(오름차순)
 	for (int i = 0; i < Q; i++)
 	{
 		cin >> num;
-		if (binary_search(v.begin(), v.end(), num))
+		if (binary_search(v.begin(), v.end(), num)) //  num값이 있으면 YES를, 없으면 NO를 출력
 			cout << "YES\n";
 		else
 			cout << "NO\n";

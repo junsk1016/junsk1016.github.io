@@ -74,7 +74,7 @@ int main(void)
 		for (i = 0; i < N; i++)
 		{
 			cin >> number;
-			Answer ^= number;
+			Answer ^= number;  // XOR 연산
 		}
 
 		cout << "Case #" << test_case+1 << "\n" << Answer << endl;

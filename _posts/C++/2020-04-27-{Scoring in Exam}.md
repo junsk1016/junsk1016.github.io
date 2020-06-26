@@ -61,7 +61,7 @@ struct Quest {
 	int score;
 };
 
-bool compareQuest(Quest q1, Quest q2)
+bool compareQuest(Quest q1, Quest q2) //  score 내림차순 정렬
 {
 	return(q1.score > q2.score);
 }
@@ -75,17 +75,17 @@ int main()
 
 	cin >> N >> Q;
 
-	for (i = 0; i < N; i++)
+	for (i = 0; i < N; i++)  // N번 개의 vector size를 만들고 time만 저장
 	{
 		v.push_back(Quest());
 		cin >> v[i].time;
 	}
-	for (i = 0; i < N; i++)
+	for (i = 0; i < N; i++)  // 해당 score를 저장
 	{
 		cin >> v[i].score;
 	}
 
-	sort(v.begin(), v.end(), compareQuest);
+	sort(v.begin(), v.end(), compareQuest);  // score를 기준 내림차순으로 정렬
 
 	for (i = 0; i < Q; i++)
 	{
@@ -93,7 +93,7 @@ int main()
 		int sum = 0;
 		for (int j = 0; j < K; j++)
 		{
-			sum += v[j].time;
+			sum += v[j].time;    // 시간이 큰 순서들로 K개 더함
 		}
 		cout << sum << '\n';
 	}

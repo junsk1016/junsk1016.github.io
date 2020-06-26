@@ -70,7 +70,7 @@ int main()
 	for (int i = 1; i <= N; i++)
 		cin >> tree[i].color;
 
-	for (int i = 1; i <= N - 1; i++) // 마지막 한번 뺴고(띄어쓰기때문에)
+	for (int i = 1; i <= N - 1; i++) // 마지막 한번 빼고(출력할 때 띄어쓰기때문에)
 	{
 		int color = tree[i].color; // i 의 색깔
 		int parent = tree[i].parent; // i 의 부모

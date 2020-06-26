@@ -70,18 +70,22 @@ int main()
 		v.resize(N);
 		for(int i = 0; i < N; i ++)
 		{
-		    v[i] = 0;
+		    v[i] = 0;   // vector v 초기화
 		}
+
 		for (int i = 0; i < N; i++)
 		{
 			cin >> v[i];
 		}
+
 		sort(v.begin(), v.end());
+
 		int sum = 0;
 		for (int i = 0; i < K; i++)
 		{
 			sum += v[N - 1 - i];
 		}
+
 		cout << "Case #" << tc + 1 << '\n';
 		cout << sum << endl;;
 	}
