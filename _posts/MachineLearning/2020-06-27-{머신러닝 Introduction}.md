@@ -47,5 +47,5 @@ comments: true
  많이 들어본 용어들이죠? 이 3가지의 관계는 무엇일까요?
  AI란 Artificial Intelligence로 인공지능이라고 생각하면 되고 Machine Learning은 이번에 계속 포스팅을 통해 배워나갈 예정입니다. Deep Learning은 Machine Learning 포스팅이 모두 끝나면 포스팅할 계획으로 Multi-layer 인공 신경망을 통해 자가 발전하는 것입니다!
 
- 감을 잡으신 분들도 계시겠지만 말한 순서대로 포함이 된다고 보시면 되는데요. AI의 분야에 ML(Machine Learning)이 있고 ML의 분야 안에 Deep Learning이 있다고 생각하시면 수월합니다!
+ 감을 잡으신 분들도 계시겠지만 말한 순서대로 포함이 된다고 보시면 되는데요. AI의 분야에 ML(Machine Learning)이 있고 ML의 분야 안에 Deep Learning이 있다고 생각하시면 수월합니다!  
  즉, Deep Learning $$\subset$$ Machine Learning $$\subset$$ AI 입니다.
