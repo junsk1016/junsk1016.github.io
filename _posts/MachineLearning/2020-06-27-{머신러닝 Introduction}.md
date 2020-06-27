@@ -17,7 +17,7 @@ comments: true
 
 ##### 본 포스팅은 광운대학교 정한울 교수님 머신러닝 과목을 바탕으로 작성을 하였습니다.
 
-## 1. Machine Learning이란 무엇일까??
+## 1. **Machine Learning** 이란 무엇일까??
  + 데이터를 이용하여 습득  
  (Data Mining or Machine Learning)  
  + 과거의 경험(data)을 이용하여 성능을 개선하거나 의미있는 것을 만듦
@@ -48,5 +48,8 @@ comments: true
  많이 들어본 용어들이죠? 이 3가지의 관계는 무엇일까요?
  AI란 Artificial Intelligence로 인공지능이라고 생각하면 되고 Machine Learning은 이번에 계속 포스팅을 통해 배워나갈 예정입니다. Deep Learning은 Machine Learning 포스팅이 모두 끝나면 포스팅할 계획으로 Multi-layer 인공 신경망을 통해 자가 발전하는 것입니다!
 
+ ![ML-Relationship](https://user-images.githubusercontent.com/61397479/85913173-57ab1f80-b86d-11ea-8eb7-4e024610a1c5.PNG)  
+
  감을 잡으신 분들도 계시겠지만 말한 순서대로 포함이 된다고 보시면 되는데요. AI의 분야에 ML(Machine Learning)이 있고 ML의 분야 안에 Deep Learning이 있다고 생각하시면 수월합니다!  
- 즉, Deep Learning $$\subset$$ Machine Learning $$\subset$$ AI 입니다.
+
+ 즉, **Deep Learning $$\subset$$ Machine Learning $$\subset$$ AI** 입니다.
