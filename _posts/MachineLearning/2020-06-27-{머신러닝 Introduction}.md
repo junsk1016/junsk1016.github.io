@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "머신러닝 기본 용어 - Machine Learning"
+title: "머신러닝 기본 용어(1) - Machine Learning"
 categories:
   - MachineLearning
 tags:
@@ -53,3 +53,15 @@ comments: true
  감을 잡으신 분들도 계시겠지만 말한 순서대로 포함이 된다고 보시면 되는데요. AI의 분야에 ML(Machine Learning)이 있고 ML의 분야 안에 Deep Learning이 있다고 생각하시면 수월합니다!  
 
  즉, **Deep Learning $$\subset$$ Machine Learning $$\subset$$ AI** 입니다.
+
+## 5. Artificial Neural Network
+
+![Neural](https://user-images.githubusercontent.com/61397479/85987539-b1a41480-ba28-11ea-9100-57318eb8a34a.png)  
+
+인공신경망의 아이디어는 뉴런-시냅스에서 가져왔다고 합니다. 받는 신호들로부터의 계산된 합이 일정한 값 이상이면 출력이 되고 이하면 출력되지 않는 것을 가져와 오른족 그림처럼 신호를 x, 그에 따른 가중치를 w라고 했을 때 Sum 값이 어떠한 함수(추후엔 activation function이라고 하겠습니다)를 통해 출력으로 나가는 것으로 구현했다고 볼 수 있습니다.
+
+![Artificial Nerual Net2](https://user-images.githubusercontent.com/61397479/85988179-a2719680-ba29-11ea-868e-bc2ca9ecb238.png)  
+
+이런식으로 딥러닝이 나왔다고도 하는데 딥러닝 관련해서는 머신러닝 포스팅이 끝나고 포스팅하겠습니다!
+
+다음 포스팅은 이어서 머신러닝의 종류와 확률의 기초 등 이번 포스팅과 더불어 기본을 다지는 시간을 가지도록 하겠습니다.
