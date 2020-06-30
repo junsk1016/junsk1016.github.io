@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://recordboy.github.io/sitemap.xml
+Sitemap: https://junsk1016.github.io/sitemap.xml
