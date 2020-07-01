@@ -58,5 +58,8 @@ comments: true
 #### Online Learning  
 + Data가 조금씩 들어오면서 학습  
 + Data 끊임없이 들어옴  
+
 ---
+
+
 # Simple Classification & Regression
