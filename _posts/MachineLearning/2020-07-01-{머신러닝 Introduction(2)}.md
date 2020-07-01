@@ -21,15 +21,13 @@ comments: true
 ## 1. Supervised vs. Unsupervised Learning  
 #### Supervised Learning  
 + 지도학습  
-+ Training set : D = {($$\vec{x}_i, \vec{y}_i$$)}<sup>N</sup><sub>i=1</sub>,  
-정답(label)이 같이 존재  
++ Training set : D = {($$\vec{x}_i, \vec{y}_i$$)}<sup>N</sup><sub>i=1</sub> ,  정답(label)이 같이 존재  
 + 인건비, 시간 많이 필요  
 + ex) Classification, Regression, Neural Network ...  
 
 #### Unsupervised Learning  
 + 비지도학습  
-+ Training set : D = {$$\vec{x}_i$$}<sup>N</sup><sub>i=1</sub>
-label 없이 feature만 존재  
++ Training set : D = {$$\vec{x}_i$$}<sup>N</sup><sub>i=1</sub> ,  label 없이 feature만 존재  
 + ex) Clustering, Association rule, Density   estimation, Dimension control ...  
 
 -> 이 둘이 할 수 있는 일은 다름  
@@ -60,5 +58,5 @@ label 없이 feature만 존재
 #### Online Learning  
 + Data가 조금씩 들어오면서 학습  
 + Data 끊임없이 들어옴  
-
+---
 # Simple Classification & Regression
