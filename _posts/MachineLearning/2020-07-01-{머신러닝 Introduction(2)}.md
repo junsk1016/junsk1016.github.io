@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "머신러닝 기본 용어(2)(수정중) - Machine Learning"
+title: "머신러닝 기본 용어(2) - Machine Learning"
 categories:
   - MachineLearning
 tags:
@@ -63,3 +63,49 @@ comments: true
 
 
 # Simple Classification & Regression
+
+## Simple Classification  
+
+ex) Age,Vision vs. Glass wearing  
+![ML-Simple Classification](https://user-images.githubusercontent.com/61397479/86396586-269f7480-bcdd-11ea-969c-17c56a64c8dc.png)  
+
+이 때 (*X<sub>i</sub>*, y<sub>i</sub>)  
+--> *X<sub>i</sub>* = (vision, age), y<sub>i</sub> = 0 or 1  
+boundary는 computer가 만듦
+
+## Simple Regression  
+
+ex) Study hour vs. Exam score  
+![ML-Simple Regression](https://user-images.githubusercontent.com/61397479/86397478-dde8bb00-bcde-11ea-8e30-38e41919a30c.png)  
+
+이 때 (*X<sub>i</sub>*, y<sub>i</sub>)  
+--> *X<sub>i</sub>* = Study hour, y<sub>i</sub> = Exam score  
+
++ regression 결정 방법
+모든 datapoint를 지나갈 수는 없지만 최대한 fitting할 수 있는 직선을 찾음
+
+잘못 찾으면? 점들과 직선 사이의 거리가 최소가 되도록 학습
+--> ![ML-Simple Regression-latex](https://user-images.githubusercontent.com/61397479/86397964-c78f2f00-bcdf-11ea-87db-8387a6d146c3.png)  
+
+이 식을 cost라고 하며 이 cost를 최소화하는 a,b를 찾는 것이 목적
+
+이런 방식으로 학습하면 study hour가 주어졌을 때 예상되는 exam score를 출력하게 됨
+
+---
+
+# Probability & Statistics을 알아야 하는 이유
++ Machine Learning에서 기본으로 다룸
++ 실제로 모든 data는 "Uncertain" & "Ambigous"
++ outlier 들을 Handling하기 위해서
+
+ex) 숫자 5를 주고 무엇인지 맞춰야 하는 알고리즘에 대해 이 숫자가 5인지 3인지를 구별하기 위해서는 확률 기반으로 예측을 하는 것이 더 정확
+
+
+## Conditional Probability
++ 조건부 확률
++ P(A|B) = B가 일어날 때 A의 확률
+
+---
+
+이번 포스팅은 Introduction인 만큼 용어에 대해 간단하게만 짚고 넘어겠습니다.
+다음 포스팅부터 차근차근 알아가보도록 하겠습니다.
