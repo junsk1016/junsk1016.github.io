@@ -95,7 +95,7 @@ ex) Study hour vs. Exam score
 
 # Probability & Statistics을 알아야 하는 이유
 + Machine Learning에서 기본으로 다룸
-+ 실제로 모든 data는 "Uncertain" & "Ambigous"
++ 실제로 모든 data는 "Uncertain" & "Ambiguous"
 + outlier 들을 Handling하기 위해서
 
 ex) 숫자 5를 주고 무엇인지 맞춰야 하는 알고리즘에 대해 이 숫자가 5인지 3인지를 구별하기 위해서는 확률 기반으로 예측을 하는 것이 더 정확
