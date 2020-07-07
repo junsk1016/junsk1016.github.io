@@ -69,8 +69,8 @@ comments: true
 ex) Age,Vision vs. Glass wearing  
 ![ML-Simple Classification](https://user-images.githubusercontent.com/61397479/86396586-269f7480-bcdd-11ea-969c-17c56a64c8dc.png)  
 
-이 때 (*X<sub>i</sub>*, y<sub>i</sub>)  
---> *X<sub>i</sub>* = (vision, age), y<sub>i</sub> = 0 or 1  
+이 때 (**X<sub>i</sub>**, y<sub>i</sub>)  
+--> **X<sub>i</sub>** = (vision, age), y<sub>i</sub> = 0 or 1  
 boundary는 computer가 만듦
 
 ## Simple Regression  
@@ -78,8 +78,8 @@ boundary는 computer가 만듦
 ex) Study hour vs. Exam score  
 ![ML-Simple Regression](https://user-images.githubusercontent.com/61397479/86397478-dde8bb00-bcde-11ea-8e30-38e41919a30c.png)  
 
-이 때 (*X<sub>i</sub>*, y<sub>i</sub>)  
---> *X<sub>i</sub>* = Study hour, y<sub>i</sub> = Exam score  
+이 때 (**X<sub>i</sub>**, y<sub>i</sub>)  
+--> **X<sub>i</sub>** = Study hour, y<sub>i</sub> = Exam score  
 
 + regression 결정 방법
 모든 datapoint를 지나갈 수는 없지만 최대한 fitting할 수 있는 직선을 찾음
@@ -103,7 +103,7 @@ ex) 숫자 5를 주고 무엇인지 맞춰야 하는 알고리즘에 대해 이 
 
 ## Conditional Probability
 + 조건부 확률
-+ P(A|B) = B가 일어날 때 A의 확률
++ P(A\|B) = B가 일어날 때 A의 확률
 
 ---
 
