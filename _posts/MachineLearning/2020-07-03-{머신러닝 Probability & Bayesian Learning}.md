@@ -71,11 +71,11 @@ Central limit theorem은 간단히 설명하면 각각의 확률이 독립적이
 + 통계와 Machine Learning에서 가장 많이 쓰이는 분포  
 + ![Gaussain_Distribution_Contiuous_RV](https://user-images.githubusercontent.com/61397479/86562270-64322500-bf9d-11ea-8994-131aba3347d0.JPG)  
 + $$\mu = E[X]$$ : 평균(mean), $$\sigma ^{^{2}} = var[X]$$ : 분산(variance)  
-+ **X** ~ N($$\mu, \sigma^{^{2}}$$)의 의미는 확률 p(X=x)가 N(x\\$$\mu, \simga^{^{2}}$$)를 따른다는 의미  
++ **X** ~ N($$\mu, \sigma^{^{2}}$$)의 의미는 확률 p(X=x)가 N(x\|$$\mu$$, $$\simga^{^{2}}$$)를 따른다는 의미  
 + Gaussian의 cdf
 ![Gaussain_Distribution_Contiuous_RV_cdf](https://user-images.githubusercontent.com/61397479/86562799-44e7c780-bf9e-11ea-908b-bf704ef844fe.JPG)  
 
-ex) 2~3의 확률을 구하려면 2~3까지 적분만 하면 됩니다.
+ex) 2~3의 확률을 구하려면 2~3까지 적분만 하면 됩니다.  
 P(2 ≤ x ≤ 3) = $$\Phi (3) -  \Phi (2)$$  
 
 ---  
