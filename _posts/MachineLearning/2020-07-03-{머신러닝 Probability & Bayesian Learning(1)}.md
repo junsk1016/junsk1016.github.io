@@ -42,7 +42,7 @@ ex)
 
 + EX) 윷놀이에서 확률 분포  
 ![Discrete_RV](https://user-images.githubusercontent.com/61397479/86558105-62636400-bf93-11ea-89f2-8b6e02d13c04.JPG)  
-  이것도 확률 분포(pmf)라고 할 수 있으며 각 확률들의 총합은 1인 것을 확인  
+  다음과 같은 그래프도 확률 분포(pmf)라고 할 수 있으며 각 확률들의 총합은 1인 것을 확인  
 
 ---  
 # Continuous(연속) Random Variable(RV)  
@@ -71,7 +71,7 @@ Central limit theorem은 간단히 설명하면 각각의 확률이 독립적이
 + 통계와 Machine Learning에서 가장 많이 쓰이는 분포  
 + ![Gaussain_Distribution_Contiuous_RV](https://user-images.githubusercontent.com/61397479/86562270-64322500-bf9d-11ea-8994-131aba3347d0.JPG)  
 + $$\mu = E[X]$$ : 평균(mean), $$\sigma ^{^{2}} = var[X]$$ : 분산(variance)  
-+ **X** ~ N($$\mu, \sigma^{^{2}}$$)의 의미는 확률 p(X=x)가 N(x\|$$\mu$$, $$\simga^{^{2}}$$)를 따른다는 의미  
++ **X** ~ N($$\mu, \sigma^{^{2}}$$)의 의미는 확률 p(X=x)가 N(x\|$$\mu$$, $$\sigma ^{^{2}} $$)를 따른다는 의미  
 + Gaussian의 cdf
 ![Gaussain_Distribution_Contiuous_RV_cdf](https://user-images.githubusercontent.com/61397479/86562799-44e7c780-bf9e-11ea-908b-bf704ef844fe.JPG)  
 
@@ -140,6 +140,7 @@ Ocean View = O라고 하겠습니다. 티켓애서 뽑는거니 각각의 확률
  + P(C\|O) = $$\frac{P(C, O)}{P(O)}$$ = $$\frac{P(C \mid O)P(C)}{P(O)}$$ - (3)  
  인 것을 금방 알 수 있습니다! 하지만 우리는 정확한 확률값을 구하고 싶은 것이 아닙니다. 이 3가지의 확률 중 가장 큰 확률을 찾는 것이 목적이기 때문에 공통인 분모 P(O)는 무시할 수 있고, 위의 식들은 아래와 같이 정의할 수 있습니다.
 
+
  + (1) P(A\|O) ∝ $$P(A \mid O)P(A)$$ = 0.75 x $$\frac{4}{9}$$  
  + (2) P(B\|O) ∝ $$P(B \mid O)P(B)$$ = 0.25 x $$\frac{2}{9}$$  
  + (3) P(C\|O) ∝ $$P(C \mid O)P(C)$$ = 0.5 x $$\frac{3}{9}$$  
@@ -151,6 +152,7 @@ Ocean View = O라고 하겠습니다. 티켓애서 뽑는거니 각각의 확률
 
 방금과 같은 문제에 대해 수식 하나를 가져와서 보면  
 $$P(y=c \mid \mathbf{x})$$ ∝ $$P(\mathbf{x} \mid y=c)P(y=c)$$라고 볼 수 있습니다.  
+
 수식을 설명하면,  
 $$P(y=c \mid \mathbf{x})$$ : feature **x** 가 주어질 때 여러개의 정답(class) 중에서 c일 확률은  
 $$P(\mathbf{x} \mid y=c)$$ : 정답 c일 때의 feature 확률과  
