@@ -3,6 +3,7 @@ layout: single
 title: "Algorithm Efficiency에 대해"
 categories:
   - C++
+classes: wide
 tags:
   - github
   - blog

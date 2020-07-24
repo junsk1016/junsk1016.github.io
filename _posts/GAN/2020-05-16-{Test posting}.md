@@ -3,6 +3,7 @@ layout: single
 title: "Test Posting - GAN"
 categories:
   - GAN
+classes: wide
 tags:
   - jeykll
   - github

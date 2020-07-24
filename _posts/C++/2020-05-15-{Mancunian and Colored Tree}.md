@@ -3,6 +3,7 @@ layout: single
 title: "Mancunian and Colored Tree - Hackerearth"
 categories:
   - C++
+classes: wide
 tags:
   - github
   - blog

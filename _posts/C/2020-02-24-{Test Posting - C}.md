@@ -3,6 +3,7 @@ layout: single
 title: "Test Posting - C"
 categories:
   - C
+classes: wide
 tags:
   - jeykll
   - github

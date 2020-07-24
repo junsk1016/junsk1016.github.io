@@ -3,6 +3,7 @@ layout: single
 title: "Test Posting - Machine Learning"
 categories:
   - MachineLearning
+classes: wide
 tags:
   - jeykll
   - github

@@ -3,6 +3,7 @@ layout: single
 title: "머신러닝 기본 용어(2) - Machine Learning"
 categories:
   - MachineLearning
+classes: wide
 tags:
   - jeykll
   - github

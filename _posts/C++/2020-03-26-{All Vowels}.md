@@ -3,6 +3,7 @@ layout: single
 title: "All Vowels - Hackerearth"
 categories:
   - C++
+classes: wide
 tags:
   - github
   - blog

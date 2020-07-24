@@ -3,6 +3,7 @@ layout: single
 title: "Test Posting - Anaconda"
 categories:
   - Anaconda
+classes: wide
 tags:
   - jeykll
   - github

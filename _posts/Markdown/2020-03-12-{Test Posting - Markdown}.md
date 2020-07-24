@@ -3,6 +3,7 @@ layout: single
 title: "Test Posting - Markdown"
 categories:
   - Markdown
+classes: wide
 tags:
   - jeykll
   - github

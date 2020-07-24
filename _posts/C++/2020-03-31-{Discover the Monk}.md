@@ -3,6 +3,7 @@ layout: single
 title: "Discover the Monk - Hackerearth"
 categories:
   - C++
+classes: wide
 tags:
   - github
   - blog

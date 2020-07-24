@@ -3,6 +3,7 @@ layout: single
 title: "Probability & Bayesian Learning (2) - Machine Learning"
 categories:
   - MachineLearning
+classes: wide
 tags:
   - jeykll
   - github

@@ -3,6 +3,7 @@ layout: single
 title: "숫자 골라내기 - CodeGround"
 categories:
   - C++
+classes: wide
 tags:
   - github
   - blog

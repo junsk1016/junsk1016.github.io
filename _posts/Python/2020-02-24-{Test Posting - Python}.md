@@ -3,6 +3,7 @@ layout: single
 title: "Test Posting - Python"
 categories:
   - Python
+classes: wide
 tags:
   - jeykll
   - github

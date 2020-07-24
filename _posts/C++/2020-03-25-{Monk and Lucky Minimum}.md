@@ -3,6 +3,7 @@ layout: single
 title: "Monk and Lucky Minimun - Hackerearth"
 categories:
   - C++
+classes: wide
 tags:
   - github
   - blog

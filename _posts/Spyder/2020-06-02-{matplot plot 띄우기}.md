@@ -3,6 +3,7 @@ layout: single
 title: "IDE에서 matplotlib plt 창 띄우기"
 categories:
   - Spyder
+classes: wide
 tags:
   - jeykll
   - github

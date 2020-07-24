@@ -3,6 +3,7 @@ layout: single
 title: "Scoring in Exam - Hackerearth"
 categories:
   - C++
+classes: wide
 tags:
   - github
   - blog
