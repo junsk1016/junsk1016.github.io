@@ -66,3 +66,5 @@ $$\hat{y} = h_{w}(\mathbf{x}) = \mathbf{w}^{T}\mathbf{x} = w_{0} + w_{1}x_{1}$$
 참고로 $$\vec{\theta} = (\theta_{0}, \theta_{1})$$를 linear regression에 한해서는 w라고 합니다!  
 
 # Residual Sum of Squares  
+
+위에서 $$\hat{y}$$은 예측값이라고 말씀드렸습니다. 그러면 이 예측값이 정답에 가까워져야할텐데 
