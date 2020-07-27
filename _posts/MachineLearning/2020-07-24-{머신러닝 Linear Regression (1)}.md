@@ -36,11 +36,11 @@ Linear Regression에 들어가기 앞서 먼저 알아야할 것들에 대해 �
 # Linear Regression model  
 
 $$\hat{y} = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + \theta_{3}x_{3} + ... + \theta_{D}x_{D}$$  
-+ $$\hat{y} = 모델이 예측한 값$$  
-+ $$D = feature의 수$$  
-+ $$x_{i} = i^{th} feature value$$  
-+ $$\theta_{j} = j^{th} model parameter$$  
-+ $$\theta_{0} = bias$$  
++ $$\hat{y}$$ = 모델이 예측한 값  
++ $$D$$ = feature의 수  
++ $$x_{i} = i^{th}$$ feature value  
++ $$\theta_{j} = j^{th}$$ model parameter  
++ $$\theta_{0}$$ = bias  
 
 $$\hat{y}$$는 model이 예측한 값이지 정답을 말하는 것이 아님을 주의해야 합니다. 또한, bias값 때문에 matrix의 곲을 진행할 때에는 실제로 없는 $$x_{0}$$을 만들고 1값으로 해줘야합니다. 아래 식은 벡터로 표현한 식입니다. 참고하시면 됩니다.  
 
@@ -54,10 +54,12 @@ x_{2}\\
 x_{3}
 \end{bmatrix}$$  
 
-+ $$h_{\theta} : hypothesis function with model parameter vector \theta$$  
++ $$h_{\theta}$$ : hypothesis function with model parameter vector $$\theta$$  
 
 이제 개념은 얼추 잡았으니 어떻게 모델이 학습되는지 알아야겠죠? 학습은 주어진 데이터에 가장 적합한 MLE의 선형 곡선을 결정해야합니다. 즉 $$\hat{y}$$을 올바르게 정해야합니다. N=1(feature vector가 1일 때)를 예로 들어 보겠습니다. 이때의 예측값 $$\hat{y}$$은  
 $$\hat{y} = h_{w}(\mathbf{x}) = \mathbf{w}^{T}\mathbf{x} = w_{0} + w_{1}x_{1}$$  
 이며 우리는 아래 그림처럼 data의 분포를 최대한 만족하는 $$\mathbf{w}$$을 결정해야 합니다.  
 
-![N=1_Example](./N=1_Example.jpg)  
+![N=1_Example](./img/N=1_Example.jpg)  
+
+참고로 \vec{\theta} = (\theta_{0}, \theta_{1})를 linear regression에 한해서는 w라고 합니다!  
