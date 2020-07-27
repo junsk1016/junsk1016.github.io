@@ -36,7 +36,7 @@ Linear Regression에 들어가기 앞서 먼저 알아야할 것들에 대해 �
 
 # Linear Regression model  
 
-$$\hat{y} = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + \theta_{3}x_{3} + ... + \theta_{D}x_{D}$$  
+<center>$$\hat{y} = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2} + \theta_{3}x_{3} + ... + \theta_{D}x_{D}$$</center>.  
 + $$\hat{y}$$ = 모델이 예측한 값  
 + $$D$$ = feature의 수  
 + $$x_{i} = i^{th}$$ feature value  
@@ -58,7 +58,7 @@ x_{3}
 + $$h_{\theta}$$ : hypothesis function with model parameter vector $$\theta$$  
 
 이제 개념은 얼추 잡았으니 어떻게 모델이 학습되는지 알아야겠죠? 학습은 주어진 데이터에 가장 적합한 MLE의 선형 곡선을 결정해야합니다. 즉 $$\hat{y}$$을 올바르게 정해야합니다. N=1(feature vector가 1일 때)를 예로 들어 보겠습니다. 이때의 예측값 $$\hat{y}$$은  
-$$\hat{y} = h_{w}(\mathbf{x}) = \mathbf{w}^{T}\mathbf{x} = w_{0} + w_{1}x_{1}$$  
+<center>$$\hat{y} = h_{w}(\mathbf{x}) = \mathbf{w}^{T}\mathbf{x} = w_{0} + w_{1}x_{1}$$</center>  
 이며 우리는 아래 그림처럼 data의 분포를 최대한 만족하는 $$\mathbf{w}$$을 결정해야 합니다.  
 
 ![N=1_Example](./img/N=1_Example.JPG)  
@@ -70,11 +70,11 @@ $$\hat{y} = h_{w}(\mathbf{x}) = \mathbf{w}^{T}\mathbf{x} = w_{0} + w_{1}x_{1}$$
 위에서 $$\hat{y}$$은 예측값이라고 말씀드렸습니다. 그러면 이 예측값이 정답에 가까워져야할텐데 실제 정답과 얼마나 다른지를 비교해야 합니다. 이 값을 error라고 하며 $$Error = y - \hat{y}$$ 로 정의합니다.  
 
 그리고 모든 Data에 해야하므로 총 에러는  
-$$\sum_{i=1}^{N}(y_{i} - \mathbf{w}^{T}\mathbf{x}_{i})^{2}$$  
+<center>$$\sum_{i=1}^{N}(y_{i} - \mathbf{w}^{T}\mathbf{x}_{i})^{2}$$</center>  
 로 정의할 수 있습니다! 그리고 이것을 RSS(Residual sum of squares)라고 부릅니다. 제곱이 있는 것을 주의하면 될 것 같습니다. 다시 한 번 정리하면
 RSS(w) = $$\sum_{i=1}^{N}(y_{i} - \mathbf{w}^{T}\mathbf{x}_{i})^{2}$$입니다.  
 또한, RSS에 평균을 낸 식이 어디선가 들어봤었던 MSE(Mean Square Error)라고 합니다.  
-$$MSE(\mathbf{w}) = \frac{RSS(\mathbf{w})}{N}$$  
+<center>$$MSE(\mathbf{w}) = \frac{RSS(\mathbf{w})}{N}$$</center>  
 우리는 이 RSS와 MSE를 loss function 혹은 cost function이라고 부릅니다. 그리고 이것을 data에 대해 model을 fit할 때 평가합니다. 에러가 작을수록 잘 fit한 것이겠죠? 참고로 RSS와 MSE는 수 많은 loss function 중에 하나라고 보시면 되고 실제로는 무수히 많습니다.  
 
 # Finding the MLE  
@@ -86,10 +86,10 @@ $$MSE(\mathbf{w}) = \frac{RSS(\mathbf{w})}{N}$$
 그러면 이제 gradient를 구해보겠습니다.  
 gradient of MSE = $$(\frac{\partial MSE}{\partial w_{0}}, \frac{\partial MSE}{\partial w_{1}} ,... ,\frac{\partial MSE}{\partial w_{N}}) = -\frac{2}{N}\sum_{i=1}^{N}(y_{i} - \mathbf{w}^{T}\mathbf{x}_{i})\mathbf{x}_{i}$$이며 $$= \vec{0}$$을 만족하는 지점이 최소화인 지점일 것입니다.  
 
-(2/N)은 필요 없으니 잠시 무시하고 분배 법칙을 사용하여,  
-$$\sum_{i=1}^{N}(y_{i} - \mathbf{w}^{T}\mathbf{x}_{i})\mathbf{x}_{i} = \sum_{i=1}^{N}(y_{i}\mathbf{x}_{i}) - \sum_{i=1}^{N}(\mathbf{w}^{T}\mathbf{x}_{i})\mathbf{x}_{i}$$  
+$$\frac{2}{N}$$은 필요 없으니 잠시 무시하고 분배 법칙을 사용하여,  
+<center>$$\sum_{i=1}^{N}(y_{i} - \mathbf{w}^{T}\mathbf{x}_{i})\mathbf{x}_{i} = \sum_{i=1}^{N}(y_{i}\mathbf{x}_{i}) - \sum_{i=1}^{N}(\mathbf{w}^{T}\mathbf{x}_{i})\mathbf{x}_{i}$$</center>  
 정리하면,  
-$$\sum_{i=1}^{N}(\mathbf{w}^{T}\mathbf{x}_{i})\mathbf{x}_{i} = \sum_{i=1}^{N}(y_{i}\mathbf{x}_{i})$$  
+<center>$$\sum_{i=1}^{N}(\mathbf{w}^{T}\mathbf{x}_{i})\mathbf{x}_{i} = \sum_{i=1}^{N}(y_{i}\mathbf{x}_{i})$$</center>  
 이 됩니다. 이 식을 만족하는 w를 찾으면 문제가 해결되겠죠?? N-dimensional vector $$\mathbf{y} = [y_{1},y_{2},...,y_{N}]^{T}$$ 와 미리 정의한 design matrix X의 정의로 다음과 같이 최종 식을 정리할 수 있습니다.  
 
 $$\mathbf{X}^{T}\mathbf{X}\mathbf{w} = \mathbf{X}^{T}y$$
