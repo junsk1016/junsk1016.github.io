@@ -61,10 +61,18 @@ x_{3}
 $$\hat{y} = h_{w}(\mathbf{x}) = \mathbf{w}^{T}\mathbf{x} = w_{0} + w_{1}x_{1}$$  
 이며 우리는 아래 그림처럼 data의 분포를 최대한 만족하는 $$\mathbf{w}$$을 결정해야 합니다.  
 
-![N=1_Example](./img/N=1_Example.JPG)  
+![N=1_Example](C:\Users\wnstl\Documents\GitHub\junsk1016.github.io/img/N=1_Example.JPG)  
 (사진 오류는 추후에 해결하겠습니다.)  
 참고로 $$\vec{\theta} = (\theta_{0}, \theta_{1})$$를 linear regression에 한해서는 w라고 합니다!  
 
 # Residual Sum of Squares  
 
-위에서 $$\hat{y}$$은 예측값이라고 말씀드렸습니다. 그러면 이 예측값이 정답에 가까워져야할텐데
+위에서 $$\hat{y}$$은 예측값이라고 말씀드렸습니다. 그러면 이 예측값이 정답에 가까워져야할텐데 실제 정답과 얼마나 다른지를 비교해야 합니다. 이 값을 error라고 하며  
+error = y - $$\hat{y}$$  
+로 정의합니다.  
+
+그리고 모든 Data에 해야하므로 총 에러는  
+$$\sum_{i=1}^{N}(y_{i} - \mathbf{w}^{T}\mathbf{x}_{i})^{2}$$  
+로 정의할 수 있습니다! 그리고 이것을 RSS(Residual sum of squares)라고 부릅니다. 제곱이 있는 것을 주의하면 될 것 같습니다. 다시 한 번 정리하면
+RSS(w) = $$\sum_{i=1}^{N}(y_{i} - \mathbf{w}^{T}\mathbf{x}_{i})^{2}$$입니다.  
+또한, RSS에 평균을 낸 식이 어디선가 들어봤었던 MSE(Mean Square Error)라고 합니다.  
