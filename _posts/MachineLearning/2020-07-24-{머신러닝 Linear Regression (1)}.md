@@ -23,7 +23,8 @@ Linear Regression에 들어가기 앞서 먼저 알아야할 것들에 대해 �
 
 # Vextor & Matrix  
 
-이전 포스팅들에서 언급한 것처럼 붓꽃을 분류하는 알고리즘에 대해 말하자면, 분류할 수 있는 특징이 꽃잎의 너비와 길이, 꽃받침의 너비와 길이. 이렇게 4개의 특징을 가지고 분류를 하게 되는데 vector로 표현을 하게 됩니다. 이러한 data가 1개가 아니라 무수히 많으니 매번 수많은 값을 표기하는 것이 아니라 Matrix로 간단하게 표현하다고 생각하시면 쉽게 이해할 수 있습니다. 보통 하나의 feature vector는 column vector로 표현하는데요, 데이터 개수를 N개라고 하면 $$\mathbf{X}$$ = $$\mathbf{x}_{1}^{T}$$ ... 로 정의가 가능하며 design matrix라고 부릅니다. size는 N x D가 되겠습니다. 또한 이 Design matrix를 weight matirx와 곱하게 되고 이 weight 값을 변경하여 각각의 중요도를 바꾸는 것이고 model을 수정한다고 말씀드렸습니다.  
+이전 포스팅들에서 언급한 것처럼 붓꽃을 분류하는 알고리즘에 대해 말하자면, 분류할 수 있는 특징이 꽃잎의 너비와 길이, 꽃받침의 너비와 길이. 이렇게 4개의 특징을 가지고 분류를 하게 되는데 vector로 표현을 하게 됩니다. 이러한 data가 1개가 아니라 무수히 많으니 매번 수많은 값을 표기하는 것이 아니라 Matrix로 간단하게 표현하다고 생각하시면 쉽게 이해할 수 있습니다.  
+보통 하나의 feature vector는 column vector로 표현하는데요, 데이터 개수를 N개라고 하면 $$\mathbf{X}$$ = $$\mathbf{x}_{1}^{T}$$ ... 로 정의가 가능하며 design matrix라고 부릅니다. size는 N x D가 되겠습니다. 또한 이 Design matrix를 weight matirx와 곱하게 되고 이 weight 값을 변경하여 각각의 중요도를 바꾸는 것이고 model을 수정한다고 말씀드렸습니다.  
 
 # Linear Regression 예  
 
@@ -62,4 +63,6 @@ $$\hat{y} = h_{w}(\mathbf{x}) = \mathbf{w}^{T}\mathbf{x} = w_{0} + w_{1}x_{1}$$
 
 ![N=1_Example](./img/N=1_Example.jpg)  
 
-참고로 \vec{\theta} = (\theta_{0}, \theta_{1})를 linear regression에 한해서는 w라고 합니다!  
+참고로 $$\vec{\theta} = (\theta_{0}, \theta_{1})$$를 linear regression에 한해서는 w라고 합니다!  
+
+# Residual Sum of Squares  
