@@ -24,7 +24,10 @@ Linear Regression에 들어가기 앞서 먼저 알아야할 것들에 대해 �
 # Vextor & Matrix  
 
 이전 포스팅들에서 언급한 것처럼 붓꽃을 분류하는 알고리즘에 대해 말하자면, 분류할 수 있는 특징이 꽃잎의 너비와 길이, 꽃받침의 너비와 길이. 이렇게 4개의 특징을 가지고 분류를 하게 되는데 vector로 표현을 하게 됩니다. 이러한 data가 1개가 아니라 무수히 많으니 매번 수많은 값을 표기하는 것이 아니라 Matrix로 간단하게 표현하다고 생각하시면 쉽게 이해할 수 있습니다.  
+
 보통 하나의 feature vector는 column vector로 표현하는데요, 데이터 개수를 N개라고 하면 $$\mathbf{X}$$ = $$\mathbf{x}_{1}^{T}$$ ... 로 정의가 가능하며 design matrix라고 부릅니다. size는 N x D가 되겠습니다. 또한 이 Design matrix를 weight matirx와 곱하게 되고 이 weight 값을 변경하여 각각의 중요도를 바꾸는 것이고 model을 수정한다고 말씀드렸습니다.  
+
+---  
 
 # Linear Regression 예  
 
@@ -33,6 +36,8 @@ Linear Regression에 들어가기 앞서 먼저 알아야할 것들에 대해 �
 + (키, 몸무게, 운동시간) vs. 신체 나이  
 
 이렇게 결과로 연속적인 값이 나온다고 보시면 됩니다. 공부시간처럼 input이 1차원으로 이루어진 것을 linear Regression이라고 합니다. 집값이나 신체나이의 경우처럼 input의 차원이 높아지는 경우도 있는데요. 2차원인 경우는 multi-dimension, 3차원 이상부터는 hyper-demension이라고 부르며, 추가적으로 $$\hat{y} = a_{1}x_{1} + a_{2}x_{2} + a_{3}mx_{1}^{2}$$처럼 제곱 이상이 들어간 경우를 polynomial regression이라고 부릅니다.  
+
+---  
 
 # Linear Regression model  
 
@@ -65,6 +70,8 @@ x_{3}
 (사진 오류는 추후에 해결하겠습니다.)  
 참고로 $$\vec{\theta} = (\theta_{0}, \theta_{1})$$를 linear regression에 한해서는 w라고 합니다!  
 
+---  
+
 # Residual Sum of Squares  
 
 위에서 $$\hat{y}$$은 예측값이라고 말씀드렸습니다. 그러면 이 예측값이 정답에 가까워져야할텐데 실제 정답과 얼마나 다른지를 비교해야 합니다. 이 값을 error라고 하며 $$Error = y - \hat{y}$$ 로 정의합니다.  
@@ -76,6 +83,8 @@ RSS(w) = $$\sum_{i=1}^{N}(y_{i} - \mathbf{w}^{T}\mathbf{x}_{i})^{2}$$입니다.
 또한, RSS에 평균을 낸 식이 어디선가 들어봤었던 MSE(Mean Square Error)라고 합니다.  
 <center>$$MSE(\mathbf{w}) = \frac{RSS(\mathbf{w})}{N}$$</center>  
 우리는 이 RSS와 MSE를 loss function 혹은 cost function이라고 부릅니다. 그리고 이것을 data에 대해 model을 fit할 때 평가합니다. 에러가 작을수록 잘 fit한 것이겠죠? 참고로 RSS와 MSE는 수 많은 loss function 중에 하나라고 보시면 되고 실제로는 무수히 많습니다.  
+
+---  
 
 # Finding the MLE  
 
@@ -104,5 +113,7 @@ $$\mathbf{X}^{T}\mathbf{X}\mathbf{w} = \mathbf{X}^{T}y$$
 그러면 공식 말고 찾을 수 있는 방법이 없을까요?? 있습니다!
 
 MSE의 gradient 를 구하는 식에서 미분 값이 0벡터이어야 한다고 말씀을 드렸었습니다. 즉, 0이 되는 지점을 찾는것이죠. 그러면 만약 현재 값에 대해 gradient를 구했을 때, + 혹은 - 값을 가진다면 그 반대값을 더해준다면 0을 찾을 수 있지 않을까요? 음수면 증가시키고 양수면 감소시킨다면 0을 찾을 수 있을 겁니다. 이것이 흔히 알고있는 Gradient Descent Method입니다.  
+
+---  
 
 # Gradient Descent Method  
