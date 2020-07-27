@@ -62,7 +62,7 @@ $$\hat{y} = h_{w}(\mathbf{x}) = \mathbf{w}^{T}\mathbf{x} = w_{0} + w_{1}x_{1}$$
 이며 우리는 아래 그림처럼 data의 분포를 최대한 만족하는 $$\mathbf{w}$$을 결정해야 합니다.  
 
 ![N=1_Example](./img/N=1_Example.jpg)  
-
+(사진 오류는 추후에 해결하겠습니다.)  
 참고로 $$\vec{\theta} = (\theta_{0}, \theta_{1})$$를 linear regression에 한해서는 w라고 합니다!  
 
 # Residual Sum of Squares  
