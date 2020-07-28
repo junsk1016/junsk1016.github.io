@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Linear Regression (1) (수정중) - Machine Learning"
+title: "Linear Regression (1) - Machine Learning"
 categories:
   - MachineLearning
 classes: wide
@@ -116,4 +116,4 @@ MSE의 gradient 를 구하는 식에서 미분 값이 0벡터이어야 한다고
 
 ---  
 
-# Gradient Descent Method  
+Gradient descent method부터는 다음 포스팅에 이어서 하도록 하겠습니다. 감사합니다.
