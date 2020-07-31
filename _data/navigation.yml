@@ -29,3 +29,5 @@ docs:
     url: "categories/atom"
   - title: "Spyder"
     url: "categories/spyder"
+  - title: "OpenCV"
+    url: "categories/opencv"
