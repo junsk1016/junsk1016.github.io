@@ -14,7 +14,7 @@ use_math: true
 comments: true
 ---
 
-###### 이번 포스팅은 머신러닝에 필요한 Probability & Bayesian Learning에 대해 포스팅하겠습니다.  
+###### 이번 포스팅은 Linear Regression에 대해 포스팅하겠습니다.  
 
 ##### 본 포스팅은 광운대학교 정한울 교수님 머신러닝 과목을 바탕으로 작성을 하였습니다.  
 ---  
