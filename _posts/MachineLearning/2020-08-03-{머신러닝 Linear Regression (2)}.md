@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Linear Regression (1) - Machine Learning"
+title: "Linear Regression (2) - Machine Learning"
 categories:
   - MachineLearning
 classes: wide
