@@ -34,7 +34,8 @@ MSE가 convex하다면, 훨씬 시간이 단축되며 learning rate란 $$\bigtri
 
  + 일반적으로 큰 learning rate부터 시작하여 점점 작은 값으로 변경하며 learning schedule이라고 부름
 
-![Learning rate](/img/Effect_of_Learning_Rate.jpg)  
+![Learning rate](/img/Effect_of_Learning_Rate.png
+  )  
 
 ---  
 
