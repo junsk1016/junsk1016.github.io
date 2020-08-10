@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Monk and Lucky Minimun - Hackerearth"
+title: "C++ Monk and Lucky Minimun - Hackerearth"
 categories:
   - C++
 classes: wide

@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "All Vowels - Hackerearth"
+title: "C++ All Vowels - Hackerearth"
 categories:
   - C++
 classes: wide

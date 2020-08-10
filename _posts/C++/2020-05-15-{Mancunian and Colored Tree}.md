@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Mancunian and Colored Tree - Hackerearth"
+title: "C++ Mancunian and Colored Tree - Hackerearth"
 categories:
   - C++
 classes: wide

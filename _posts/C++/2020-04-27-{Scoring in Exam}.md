@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Scoring in Exam - Hackerearth"
+title: "C++ Scoring in Exam - Hackerearth"
 categories:
   - C++
 classes: wide

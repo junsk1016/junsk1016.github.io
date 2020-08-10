@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "숫자 골라내기 - CodeGround"
+title: "C++ 숫자 골라내기 - CodeGround"
 categories:
   - C++
 classes: wide

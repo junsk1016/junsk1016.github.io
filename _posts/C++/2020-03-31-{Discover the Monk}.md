@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Discover the Monk - Hackerearth"
+title: "C++ Discover the Monk - Hackerearth"
 categories:
   - C++
 classes: wide

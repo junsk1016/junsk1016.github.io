@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Linear Search와 Binary Search에 대해"
+title: "C++ Linear Search와 Binary Search에 대해"
 categories:
   - C++
 classes: wide

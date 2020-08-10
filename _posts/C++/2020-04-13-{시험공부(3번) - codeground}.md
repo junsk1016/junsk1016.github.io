@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "시험 공부 - CodeGround"
+title: "C++ 시험 공부 - CodeGround"
 categories:
   - C++
 classes: wide
