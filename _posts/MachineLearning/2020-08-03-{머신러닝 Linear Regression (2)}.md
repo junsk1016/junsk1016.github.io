@@ -55,12 +55,12 @@ Data가 매우 많다고 가정을 하게 되면 Gradient Descent도 모든 data
 x : data , $\theta$ : model , N : Gaussain  
 
 이 모델의 파라미터를 추정하는 다음과 같이 MLE를 사용하는 것이었습니다.  
-$\hat{\theta} \delequal arg\underset{\theta}{max}logp(D|\theta)$  
+$\hat{\theta} \equiv  arg\underset{\theta}{max}logp(D|\theta)$  
 우변의 log 텀이 최대가 되는 $\theta$를 찾는 것이었습니다.
 
 그리고 일반적으로 학습하는 예제가 독립적이고 동일하게 분포되어 있다고 가정하기 때문에 다음과 같이 정의할 수 있습니다.  
 log-likelihood의 의미를 가지는
-$\mathit{l}(\theta) \delequal logp(D|\theta) = \sum_{i=1}^{N}logp(y_{i}|\boldsymbol{x_{i}},\theta)$  
+$\mathit{l}(\theta) \equiv  logp(D|\theta) = \sum_{i=1}^{N}logp(y_{i}|\boldsymbol{x_{i}},\theta)$  
 식으로 표현할 수 있습니다. sum이 최대가 되는 것에 집중하여 보시면 됩니다.
 
 ---
