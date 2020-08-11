@@ -102,7 +102,7 @@ $$\frac{2}{N}$$은 필요 없으니 잠시 무시하고 분배 법칙을 사용�
 이 됩니다. 이 식을 만족하는 w를 찾으면 문제가 해결되겠죠?? N-dimensional vector $$\mathbf{y} = [y_{1},y_{2},...,y_{N}]^{T}$$ 와 미리 정의한 design matrix X의 정의로 다음과 같이 최종 식을 정리할 수 있습니다.  
 
 $$\mathbf{X}^{T}\mathbf{X}\mathbf{w} = \mathbf{X}^{T}y$$
-로 하며 Normal eauation 이라고 정의합니다. 이 식을 만족하는 w를 찾아야합니다. 이 w 식을 찾게 해주는 식을 Normal equation이라고 하는 겁니다.
+로 하며 Normal eqauation 이라고 정의합니다. 이 식을 만족하는 w를 찾아야합니다. 이 w 식을 찾게 해주는 식을 Normal equation이라고 하는 겁니다.
 
 그리고 이 Normal equation를 만족하는 w를 $$\hat{\mathbf{w}}_{OLS}$$라고 하며 $$\hat{\mathbf{w}}_{OLS} = (\mathbf{X}^{T}\mathbf{X})^{-1}\mathbf{X}^{T}y$$로 구할 수 있습니다. 우변에 있는 값들은 모두 일고 있는 것들이므로 직선을 바로 구할 수 있겠습니다. 하지만 차원 D, data 개수 N이 매우 클 때 이렇게 w를 구하는 것은 매우 복잡합니다. 그리고 아래와 같은 문제점이 또 발생할 수 있습니다.
 
