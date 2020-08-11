@@ -68,8 +68,9 @@ $\mathit{l}(\theta) \equiv  logp(D|\theta) = \sum_{i=1}^{N}logp(y_{i}|\boldsymbo
 # MLE 유도하기
 
 위 식에 가우시안 정의를 대입하여 보면 다음과 같이 유도할 수 있습니다.  
-$\mathit{l}(\theta) = \sum_{i=1}^{N}logp[(\frac{1}{2\pi\sigma })^{\frac{1}{2}}) exp(-\frac{1}{2\sigma^{2}}(y_{i}-\mu = \textup{w}^{T}\textbf{x}_{i})^{2})]$  
+$\mathit{l}(\theta) = \sum_{i=1}^{N}logp[(\frac{1}{2\pi\sigma })^{\frac{1}{2}})$ $exp(-\frac{1}{2\sigma^{2}}(y_{i}-\mu = \textup{w}^{T}\textbf{x}_{i})^{2})]$  
 $ = -\frac{1}{2\sigma ^{2}}RSS(\textbf{w}) - \frac{N}{2}log(2\pi \sigma ^{2})$  
+
 기존의 가우시안 식에서 평균 $\mu = \textup{w}^{T}\textbf{x}_{i}$이라고 보시면 됩니다. 정리된 식에서 보면 RSS를 최대로 하면 되며 즉, Normal equation으로 풀면 된다는 것을 알 수 있습니다. Normal equation이 잘 기억이 안 나신다면 이전 포스팅을 참고하시기 바랍니다.
 
 Normal equation 식은 다음과 같습니다.
