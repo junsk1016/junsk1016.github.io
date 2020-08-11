@@ -53,7 +53,7 @@ comments: true
 
  감을 잡으신 분들도 계시겠지만 말한 순서대로 포함이 된다고 보시면 되는데요. AI의 분야에 ML(Machine Learning)이 있고 ML의 분야 안에 Deep Learning이 있다고 생각하시면 수월합니다!  
 
- 즉, **Deep Learning $$\subset$$ Machine Learning $$\subset$$ AI** 입니다.
+ 즉, **Deep Learning $\subset$ Machine Learning $\subset$ AI** 입니다.
 
 ## 5. Artificial Neural Network
 

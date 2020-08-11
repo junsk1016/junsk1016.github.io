@@ -35,7 +35,7 @@ ex)
 
 + **X** 는 유한하거나(ex) {0,2,6}) countabley infinite(ex) 정수={0, 1, -1, 2, -2, ...})  
 
-+ 이산 랜덤 변수 **X** 에서 x라는 event가 발생할 확률(**X** = x)은 p(X = x) or p(x)라고 함($$x\in X $$)  
++ 이산 랜덤 변수 **X** 에서 x라는 event가 발생할 확률(**X** = x)은 p(X = x) or p(x)라고 함($x\in X $)  
 
 + 모든 확률의 총합은 1이며 각 확률을 알 수 있는 것을 확률 분포라고 부름  
 
@@ -55,9 +55,9 @@ ex)
   + p(B) = p(A) + p(W)이며 -> p(W) = p(B) - P(A)  
   + 연속에서는 q가 q보다 같거나 작을 확률로 정의하며 cdf(cumulative distribution function)라고 함 (F(q) = P(X ≤ q))  
   + ex) P(a < X ≤ b) = F(b) - F(a)  
-  + cdf의 미분 $$f(x) = \frac{\mathrm{d} F(x)}{\mathrm{d} x}$$으로 f(x)를 정의하며 pdf(probability density function)라고 함  
+  + cdf의 미분 $f(x) = \frac{\mathrm{d} F(x)}{\mathrm{d} x}$으로 f(x)를 정의하며 pdf(probability density function)라고 함  
   + pdf를 적분함으로써 확률 분포를 표현(* pdf는 확률이 아님)  
-+ $$P(a < X \leq b) = \int_{a}^{b}f(x)dx = F(b) - F(a)$$  
++ $P(a < X \leq b) = \int_{a}^{b}f(x)dx = F(b) - F(a)$  
 
 + f(x)는 모든 x에 대해 항상 0보다 크며 총합은 1  
 
@@ -71,38 +71,38 @@ Central limit theorem은 간단히 설명하면 각각의 확률이 독립적이
 
 + 통계와 Machine Learning에서 가장 많이 쓰이는 분포  
 + ![Gaussain_Distribution_Contiuous_RV](https://user-images.githubusercontent.com/61397479/86562270-64322500-bf9d-11ea-8994-131aba3347d0.JPG)  
-+ $$\mu = E[X]$$ : 평균(mean), $$\sigma ^{^{2}} = var[X]$$ : 분산(variance)  
-+ **X** ~ N($$\mu, \sigma^{^{2}}$$)의 의미는 확률 p(X=x)가 N(x\|$$\mu$$, $$\sigma ^{^{2}} $$)를 따른다는 의미  
++ $\mu = E[X]$ : 평균(mean), $\sigma ^{^{2}} = var[X]$ : 분산(variance)  
++ **X** ~ N($\mu, \sigma^{^{2}}$)의 의미는 확률 p(X=x)가 N(x\|$\mu$, $\sigma ^{^{2}} $)를 따른다는 의미  
 + Gaussian의 cdf
 ![Gaussain_Distribution_Contiuous_RV_cdf](https://user-images.githubusercontent.com/61397479/86562799-44e7c780-bf9e-11ea-908b-bf704ef844fe.JPG)  
 
 ex) 2~3의 확률을 구하려면 2~3까지 적분만 하면 됩니다.  
-P(2 ≤ x ≤ 3) = $$\Phi (3) -  \Phi (2)$$  
+P(2 ≤ x ≤ 3) = $\Phi (3) -  \Phi (2)$  
 
 ---  
 
 # Joint Probability  
 + A와 B가 동시에 일어날 확률  
-+ $$P(A,B) = P(A \cap B)$$ 라고 정의  
++ $P(A,B) = P(A \cap B)$ 라고 정의  
 
 ---  
 # Conditional Probability(조건부 확률)  
 
-+ p(A\|B) = $$\frac{p(A,B)}{p(B)}$$ if p(B) > 0  
++ p(A\|B) = $\frac{p(A,B)}{p(B)}$ if p(B) > 0  
 
 + given을 하였으므로 전체 집합이 줄어듦  
 
 ---  
 # Bayes Rule(or Bayes theorem)  
 
-$$p(X=x \mid Y=y) = \frac{p(X=x \mid Y=y)}{p(Y=y)} = \frac{p(X=x)p(Y=y\mid X=x)}{\sum_{x^{'}}p(X=x^{'})p(Y=y \mid X=x^{'})}$$  
+$p(X=x \mid Y=y) = \frac{p(X=x \mid Y=y)}{p(Y=y)} = \frac{p(X=x)p(Y=y\mid X=x)}{\sum_{x^{'}}p(X=x^{'})p(Y=y \mid X=x^{'})}$  
 
 증명)  
-p(A\|B) = $$\frac{p(A,B)}{p(B)}$$ 에서 분모를 곱하면 P(A,B) = p(A\|B)P(B)  
-      p(B\|A) = $$\frac{p(A,B)}{p(A)}$$ 에서 분모를 곱하면 P(A,B) = p(B\|A)P(A)이므로  
+p(A\|B) = $\frac{p(A,B)}{p(B)}$ 에서 분모를 곱하면 P(A,B) = p(A\|B)P(B)  
+      p(B\|A) = $\frac{p(A,B)}{p(A)}$ 에서 분모를 곱하면 P(A,B) = p(B\|A)P(A)이므로  
       P(X=x\|Y=y)를 P(Y=y\|X=x)로 구할 수 있음  
 
-분모의 경우 P(Y=y)는 $$x^{'}$$들의 합으로 볼 수 있으므로 다음과 같습니다.
+분모의 경우 P(Y=y)는 $x^{'}$들의 합으로 볼 수 있으므로 다음과 같습니다.
 
 수식으로만 보면 어렵고 이해가 잘 안되므로 문제를 풀면서 이해해보도록 하겠습니다.
 
@@ -117,7 +117,7 @@ given : 암에 걸릴 확률 = 0.004 , 암에 걸리지 않았을 때 양성이 
 Y = 1 : 양성, X = 1 : 암에 걸렸을 때라고 놓겠습니다.  
 그렇다면 P(Y = 1 \| X = 1) = 0.8이겠죠? 우리가 구하려는 것은 P(X = 1 \| Y = 1)입니다. 위에서 배웠다시피  
 
-P(X = 1 \| Y = 1) = $$\frac{P(X=1, Y=1)}{P(Y=1)}$$ 로 볼 수 있습니다.  
+P(X = 1 \| Y = 1) = $\frac{P(X=1, Y=1)}{P(Y=1)}$ 로 볼 수 있습니다.  
 분자먼저 보겠습니다.  
 P(X = 1 ,Y = 1) = P(Y = 1 \| X = 1)P(X = 1)로 놓으면  
 P(Y = 1 \| X = 1) = 0.8, P(X = 1) = 0.4이므로 분자는  
@@ -136,15 +136,15 @@ Q2) 뽑기통에서 티켓을 뽑았는데 Ocean View에 당첨되었다고 하�
 Ocean View = O라고 하겠습니다. 티켓애서 뽑는거니 각각의 확률을 쉽게 알 수 있습니다. 그렇다면 이제 어느 호텔에 있는지를 구해보겠습니다.  
 먼저 각각의 확률을 구해봅시다.
 
- + P(A\|O) = $$\frac{P(A, O)}{P(O)}$$ = $$\frac{P(A \mid O)P(A)}{P(O)}$$ - (1)  
- + P(B\|O) = $$\frac{P(B, O)}{P(O)}$$ = $$\frac{P(B \mid O)P(B)}{P(O)}$$ - (2)  
- + P(C\|O) = $$\frac{P(C, O)}{P(O)}$$ = $$\frac{P(C \mid O)P(C)}{P(O)}$$ - (3)  
+ + P(A\|O) = $\frac{P(A, O)}{P(O)}$ = $\frac{P(A \mid O)P(A)}{P(O)}$ - (1)  
+ + P(B\|O) = $\frac{P(B, O)}{P(O)}$ = $\frac{P(B \mid O)P(B)}{P(O)}$ - (2)  
+ + P(C\|O) = $\frac{P(C, O)}{P(O)}$ = $\frac{P(C \mid O)P(C)}{P(O)}$ - (3)  
  인 것을 금방 알 수 있습니다! 하지만 우리는 정확한 확률값을 구하고 싶은 것이 아닙니다. 이 3가지의 확률 중 가장 큰 확률을 찾는 것이 목적이기 때문에 공통인 분모 P(O)는 무시할 수 있고, 위의 식들은 아래와 같이 정의할 수 있습니다.
 
 
- + (1) P(A\|O) ∝ $$P(A \mid O)P(A)$$ = 0.75 x $$\frac{4}{9}$$  
- + (2) P(B\|O) ∝ $$P(B \mid O)P(B)$$ = 0.25 x $$\frac{2}{9}$$  
- + (3) P(C\|O) ∝ $$P(C \mid O)P(C)$$ = 0.5 x $$\frac{3}{9}$$  
+ + (1) P(A\|O) ∝ $P(A \mid O)P(A)$ = 0.75 x $\frac{4}{9}$  
+ + (2) P(B\|O) ∝ $P(B \mid O)P(B)$ = 0.25 x $\frac{2}{9}$  
+ + (3) P(C\|O) ∝ $P(C \mid O)P(C)$ = 0.5 x $\frac{3}{9}$  
 
 위 식을 풀어보면 (1)식이 제일 크므로 A에 있을 확률이 제일 큰거죠.  
 
@@ -152,15 +152,15 @@ Ocean View = O라고 하겠습니다. 티켓애서 뽑는거니 각각의 확률
 여기서 feature란 정답을 알기위한 힌트?라고 보시면 됩니다. 주어진 input같은 거죠. 더 깊게 들어가면 정의가 달라질 수는 있지만 추후에 더 정확하게 말씀드리겠습니다.
 
 방금과 같은 문제에 대해 수식 하나를 가져와서 보면  
-$$P(y=c \mid \mathbf{x})$$ ∝ $$P(\mathbf{x} \mid y=c)P(y=c)$$라고 볼 수 있습니다.  
+$P(y=c \mid \mathbf{x})$ ∝ $P(\mathbf{x} \mid y=c)P(y=c)$라고 볼 수 있습니다.  
 
 수식을 설명하면,  
-$$P(y=c \mid \mathbf{x})$$ : feature **x** 가 주어질 때 여러개의 정답(class) 중에서 c일 확률은  
-$$P(\mathbf{x} \mid y=c)$$ : 정답 c일 때의 feature 확률과  
-$$P(y=c)$$ : 정답들 중에서 c일 확률의 곱에 비례한다는 겁니다.
+$P(y=c \mid \mathbf{x})$ : feature **x** 가 주어질 때 여러개의 정답(class) 중에서 c일 확률은  
+$P(\mathbf{x} \mid y=c)$ : 정답 c일 때의 feature 확률과  
+$P(y=c)$ : 정답들 중에서 c일 확률의 곱에 비례한다는 겁니다.
 
 왼쪽의 수식은 저희가 모르는 수식인데 오른쪽의 확률은 알고 있을 확률이 매우 큽니다.  
 
 즉, 모르는 것을 아는 것들의 곱으로 구할 수 있는데요. 각 확률이 어떠한 분포를 가진다고 할 때, 모르는 왼쪽 식의 분포에 상관없이 각각 class에 대해 확률 분포를 구할 수 있다는 것입니다.
 
-다음 포스팅에서는 $$P(y=c \mid \mathbf{x})$$ ∝ $$P(\mathbf{x} \mid y=c)P(y=c)$$ 식에 대해 더 알아보고 머신러닝에서 어떻게 답을 찾는지 알아보겠습니다.  
+다음 포스팅에서는 $P(y=c \mid \mathbf{x})$ ∝ $P(\mathbf{x} \mid y=c)P(y=c)$ 식에 대해 더 알아보고 머신러닝에서 어떻게 답을 찾는지 알아보겠습니다.  
