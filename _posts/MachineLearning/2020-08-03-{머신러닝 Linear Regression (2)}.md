@@ -68,20 +68,22 @@ $\mathit{l}(\theta) \equiv  logp(D|\theta) = \sum_{i=1}^{N}logp(y_{i}|\boldsymbo
 # MLE 유도하기
 
 위 식에 가우시안 정의를 대입하여 보면 다음과 같이 유도할 수 있습니다.  
-$\mathit{l}(\theta) = \sum_{i=1}^{N}logp[(\frac{1}{2\pi\sigma })^{\frac{1}{2}})$ $exp(-\frac{1}{2\sigma^{2}}(y_{i}-\mu = \mathbf{w}^{T}\textbf{x}_{i})^{2})]$  
-$ = -\frac{1}{2\sigma ^{2}}RSS(\textbf{w}) - \frac{N}{2}log(2\pi \sigma ^{2})$  
+<center>$\mathit{l}(\theta) = \sum_{i=1}^{N}logp[(\frac{1}{2\pi\sigma })^{\frac{1}{2}})$ $exp(-\frac{1}{2\sigma^{2}}(y_{i}-\mu = \mathbf{w}^{T}\textbf{x}_{i})^{2})]$</center>  
+<center>$ = -\frac{1}{2\sigma ^{2}}RSS(\textbf{w}) - \frac{N}{2}log(2\pi \sigma ^{2})$</center>  
 
 기존의 가우시안 식에서 평균 $\mu = \mathbf{w}^{T}\textbf{x}_{i}$이라고 보시면 됩니다. 정리된 식에서 보면 RSS를 최대로 하면 되며 즉, Normal equation으로 풀면 된다는 것을 알 수 있습니다. Normal equation이 잘 기억이 안 나신다면 이전 포스팅을 참고하시기 바랍니다.
 
 Normal equation 식은 다음과 같습니다.
 
-$\mathbf{X}^{T}\mathbf{X}\mathbf{w} = \mathbf{X}^{T}\textbf{y}$ -> $\hat{\mathbf{w}}_{OLS} = (\mathbf{X}^{T}\mathbf{X})^{-1}\mathbf{X}^{T}\textbf{y}$
+<center>$\mathbf{X}^{T}\mathbf{X}\mathbf{w} = \mathbf{X}^{T}\textbf{y}$ -> $\hat{\mathbf{w}}_{OLS} = (\mathbf{X}^{T}\mathbf{X})^{-1}\mathbf{X}^{T}\textbf{y}$</center>
 
 ---
 
 # Regression model의 noise
 
 그러면 linear regression에서의 noise는 어떠한 분포를 띌 지 확인해보도록 하겠습니다.  
-만약 에러를 $\epsilon_{i}$ = $(y_{i}-\textbf{w}^{T}$ $\textbf{x}_{i})$ 라고 정의를 하면 RSS식은 다음처럼 표현할 수 있습니다.  
-$RSS(\textbf{w}) = \left \| \mathbf{\epsilon}  \right \|^{2}_{2} = \sum_{i=1}^{N} \epsilon_{i}^{2}$  
+만약 에러를  
+<center>$\epsilon_{i}$ = $(y_{i}-\textbf{w}^{T}\mathbf{x}_{i})$</center>  
+라고 정의를 하면 RSS식은 다음처럼 표현할 수 있습니다.  
+<center>$RSS(\textbf{w}) = \left \| \mathbf{\epsilon}  \right \|^{2}_{2} = \sum_{i=1}^{N} \epsilon_{i}^{2}$</center>  
 그렇다면 regression model의 noise은 일정한 분산을 가진 zero-mean gaussian 분포를 따른다고 할 수 있습니다.  
