@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Linear Regression (2) - Machine Learning"
+title: "Linear Regression (2)작성중 - Machine Learning"
 categories:
   - MachineLearning
 classes: wide
@@ -81,6 +81,6 @@ $$\mathbf{X}^{T}\mathbf{X}\mathbf{w} = \mathbf{X}^{T}\textbf{y}$$ -> $$\hat{\mat
 # Regression model의 noise
 
 그러면 linear regression에서의 noise는 어떠한 분포를 띌 지 확인해보도록 하겠습니다.
-$$\epsilon_{i} = (y_{i}-\textbf{w}^{T}\textbf{x}_{i})$$라고 정의를 하면 RSS식은 다음과 같습니다.
+만약 에러를 $$\epsilon_{i} = (y_{i}-\textbf{w}^{T}\textbf{x}_{i})$$라고 정의를 하면 RSS식은 다음처럼 표현할 수 있습니다.
 $$RSS(\textbf{w}) = \left \| \mathbf{\epsilon}  \right \|^{2}_{2} = \sum_{i=1}^{N} \epsilon_{i}^{2}$$
 그렇다면 regression model의 noise은 일정한 분산을 가진 zero-mean gaussian 분포를 따른다고 할 수 있습니다.
