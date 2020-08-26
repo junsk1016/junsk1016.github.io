@@ -31,3 +31,5 @@ docs:
     url: "categories/spyder"
   - title: "OpenCV"
     url: "categories/opencv"
+  - title: "Ubuntu"
+    url: "categories/ubuntu"
