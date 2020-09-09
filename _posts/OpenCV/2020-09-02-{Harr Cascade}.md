@@ -12,13 +12,13 @@ tags:
   - OpenCV
 ---
 
-## OpenCV를 이용해 Harr Cascade 구현해보기
+## OpenCV를 이용해 Harr Cascade 구현하기
 
 #### Visual Studio 2017을 사용하였습니다.
 
 불러온 파일으로는 정면 얼굴을 받아 사용하였습니다.
 
-key : CascadeClassifier, detectMultiScale
+key 함수 : CascadeClassifier, detectMultiScale
 
 ```c++
 #include <opencv2/objdetect.hpp>
