@@ -18,6 +18,32 @@ tags:
 
 key : blur, Canny, createTrackbar, setTrackbarPos, getTrackbarPos
 
+### Canny Edge Detection
+- Edge 찾기 알고리즘  
+
+- 장점 : 낮은 에러율  
+- 단점 : 복잡, 많은 시간  
+
+
+1. Noise Reduction(노이즈 제거)  
+  + 5x5 가우시안 필터를 사용해 노이즈 제거 (smoothing)  
+
+2. Gradient 값이 높은 부분 찾기  
+  + sobel 필터(가로, 세로)를 적용 -> 각 방향에서의 gradient 획득  
+
+3. Non-maximum suppresion(최댓값이 아닌 픽셀 0 만들기)  
+  + blur된 영상에서의 잘못된 검출 바로잡기  
+  + 해당 픽셀(A)의 gradient가 gradient 방향에 있는 두 픽셀의 gradient보다 큰지 확인
+  + A가 크면 크대로 유지, A가 작으면 0으로 픽셀 값 변경
+
+4. Hyteresis Thresholding
+  + threshold로 minVal, maxVal 값 설정
+  + maxVal보다 크면 확실한 edge
+  + minVAL보다 작으면 확실히 edge 아님
+  + 사이의 값은 픽셀들의 연결구조를 보고 판단
+  + why? noise나 다른 변화량은 edge와 연관성이 적으므로
+
+
 ```c++
 #include <opencv2/core.hpp>
 #include <opencv2/videoio.hpp>
