@@ -33,3 +33,5 @@ docs:
     url: "categories/opencv"
   - title: "Ubuntu"
     url: "categories/ubuntu"
+  - title: "Pytorch"
+    url: "categories/pytorch"
