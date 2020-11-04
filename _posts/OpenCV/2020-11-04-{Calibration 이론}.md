@@ -54,7 +54,7 @@ Calibration을 코드로 구현해보기 위해 공부한 것들을 정리해보
 
 3. 카메라 내부 파라미터 (Intrinsic Parameters)  
 
-![Intrinsic parameter](/img/Intrinsic parameter.JPG)
+![Intrinsic parameter](/img/Intrinsic_parameter.JPG)
 
 #### 3.1 초점 거리 (Focal length)  
 $f_{x}$ 와 $f_{y}$ 입니다. 카메라 모델에서는 상대적인 개념으로 렌즈 중심과 이미지 센서와의 거리를 나타냅니다. 동일한 카메라라도 해상도가 바뀐다면 초점거리도 바뀝니다. 그리고 헷갈리지 말아야 할 것이 초점 거리 f는 픽셀(pixel) 단위로 표현한다는 것입니다. 이것은 초점 거리 f가 이미지 센서의 셀(cell) 크기에 대한 상대적인 값으로 표현된다는 의미입니다. 이미지의 픽셀은 이미지 센서의 cell에 대응한다는 말 또한 동일한 말입니다.
@@ -81,7 +81,7 @@ skew_c로 부르며 이미지 센서의 cell array에서 y축이 기울어진 �
 
 4. 카메라 외부 파라미터 (Extrinsic Parameters)  
 
-![Extrinsic parameter](/img/Extrinsic parameter.JPG)   
+![Extrinsic parameter](/img/Extrinsic_parameter.JPG)   
 
 카메라 좌표계와 월드 좌표계 사이의 변환 관계를 설명하는 파라미터이며 두 좌표계 사이의 회전(rotation) 및 평행 이동(translation) 변환으로 표현합니다. 구하는 방법은 다음이 필요합니다.  
 
