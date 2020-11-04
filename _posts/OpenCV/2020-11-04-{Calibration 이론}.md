@@ -47,10 +47,10 @@ Calibration을 코드로 구현해보기 위해 공부한 것들을 정리해보
 
 + x, y : 카메라 좌표계의 좌표  
 + A : Intrinsic Camera Matrix (내부 파라미터)  
-+ $[R|t]$ : 회전/이동 변환 행렬 (외부 파라미터)  
++ [R\|t] : 회전/이동 변환 행렬 (외부 파라미터)  
 + X, Y, Z : 월드 좌표계 상의 3D 점의 좌표  
 
-여기서 카메라 좌표계가 이미지 2D의 좌표이고 (X, Y, Z)를 실세계의 좌표라고 보시면 됩니다. 그리고 A와 $[R|t]$ 를 합쳐 Camera Matrix 또는 Projection Matrix라고 부릅니다.
+여기서 카메라 좌표계가 이미지 2D의 좌표이고 (X, Y, Z)를 실세계의 좌표라고 보시면 됩니다. 그리고 A와 [R\|t] 를 합쳐 Camera Matrix 또는 Projection Matrix라고 부릅니다.
 
 3. 카메라 내부 파라미터 (Intrinsic Parameters)  
 
@@ -88,7 +88,7 @@ skew_c로 부르며 이미지 센서의 cell array에서 y축이 기울어진 �
 + Calibration을 이용하여 구해진 카메라 내부 파라미터
 + Sample 혹은 미리 알고 있는 3D 월드좌표 - 2D 영상좌표 매칭 쌍들
 
-이 2가지를 이용하여 변환 행렬 $[R|t]$ 를 구합니다.
+이 2가지를 이용하여 변환 행렬 [R\|t] 를 구합니다.
 
 5. 왜곡  
 카메라에 대해 숨은 내부 파라미터라고 볼 수 있는 왜곡입니다. 행렬 A(Intrinsic camera parameter)에는 들어가있지는 않지만 엄연히 존재합니다.  
