@@ -39,7 +39,7 @@ int main()
 {
 	const int width = 848;		// 세로
 	const int height = 480;		// 가로
-	const int fps = 30;			// fps		=>	 선언
+	const int fps = 30;      // fps	=> 선언
 
 	rs2::pipeline p;		
 	rs2::config c;		
@@ -49,7 +49,7 @@ int main()
 	// Camera warmup - dropping several first frames to let auto-exposure stabilize
 	rs2::pipeline_profile profile = p.start(c);									// pipeline에 config 넣고 profile 선언
 
-	cv::Mat frame_Ref;			// References frame
+	cv::Mat frame_Ref;     // References frame
 	bool is_applied = false;	// Ref Frame key true / false
 
 	while (true)
@@ -142,9 +142,9 @@ int main()
 }
 ```
 
-+ 추출한 Homography 행렬
++ 추출한 Homography 행렬  
 
-![Homography결과](/img/homography.jpg)
+![Homography](/img/homography.png)  
 
 각 3x3 행렬로 표현된 것을 확인할 수 있습니다. 우측의 200--200은 제가 size를 확인하기 위해 추가적으로 코딩한 것이니 신경쓰시지 않으셔도 됩니다.
 homography의 (3, 3)의 위치가 1로 고정된 것은 homography을 구하고 나서 (3, 3)의 값을 모든 행렬의 원소에 나누기 때문입니다. normalization이라고 합니다.
