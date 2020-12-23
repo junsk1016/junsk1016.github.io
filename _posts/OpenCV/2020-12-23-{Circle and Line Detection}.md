@@ -93,15 +93,15 @@ cv::threshold( src, dst, threshold_value, Max_value, threshold_type)
 + threshold_value : 임계 값 (0~255), 이진화 시킬 기준 값을 입력  
 + Max_value :  임계 값 이상의 픽셀들에  적용할 값  
 + threshold_type : 이진화 하는 방법  
-|**Threshold_type**|**Threshold 값 이상**|**Threshold 값 이하**|
-|:---:|:---:|:---:|
-|THRESH_BINARY|Max_value|0|
-|THRESH_BINARY_INV|0|Max_value|
-|THRESH_MASK|흑색 이미지로 변환||
-|THRESH_OTSU|Otsu 알고리즘 사용||
-|THRESH_TOZERO|원본 값|0|
-|THRESH_TOZERO_INV|0|원본 값|
-|THRESH_TRIANGLE|Triangle 알고리즘 사용||
+|**Threshold_type**|**Threshold 값 이상**|**Threshold 값 이하**|  
+|:---:|:---:|:---:|  
+|THRESH_BINARY|Max_value|0|  
+|THRESH_BINARY_INV|0|Max_value|  
+|THRESH_MASK|흑색 이미지로 변환||  
+|THRESH_OTSU|Otsu 알고리즘 사용||  
+|THRESH_TOZERO|원본 값|0|  
+|THRESH_TOZERO_INV|0|원본 값|  
+|THRESH_TRIANGLE|Triangle 알고리즘 사용||  
 |THRESH_TRUNC|Threshold 값|원본 값|  
 
 ## 6. 코드  
