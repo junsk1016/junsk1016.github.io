@@ -24,7 +24,7 @@ Hough 변환 이론에 대한 내용보다는 코딩 관련에 집중하여 포�
 
 1. HoughLinesP(확률을 적용한 Hough line detection )  
 
-<함수 원형>  
+### 함수 원형  
 HoughLinesP(src, dst, rho, theta, threshold, min_line_length, max_line_gap)  
 + src : 입력할 이미지 변수, Edge detect 된 이미지를 입력해야 함  
 + dst : Hough 변환 line detection 정보를 저장할 Array 
@@ -39,7 +39,7 @@ HoughLinesP(src, dst, rho, theta, threshold, min_line_length, max_line_gap)
 
 2. HoughCircles(Hough Circle detection)
 
-<함수 원형>  
+### 함수 원형  
 HoughCircles( src, dst, method, dp, min_dist, parameter1, parameter2, min_Radius, max_Radius)  
 + Src : 입력할 Grayscale 이미지  
 + Dst : 검출 정보를 저장할 Array, 원의 중심 정보를 저장  
@@ -55,7 +55,7 @@ HoughCircles( src, dst, method, dp, min_dist, parameter1, parameter2, min
 
 3. line(선 그리기)
 
-<함수 원형>  
+### 함수 원형  
 void line(Mat& img, Point pt1, Point pt2, const Scalar& color, int thickness = 1, int lineType = 8, int shift = 0)  
 + Mat& img : 그림 대상 행렬  
 + Point pt1, pt2 : 시작 좌표와 종료 좌표  
@@ -72,7 +72,7 @@ void line(Mat& img, Point pt1, Point pt2, const Scalar& color, int thickness = 1
 
 4. circle(원 그리기)
 
-<함수 원형>  
+### 함수 원형  
 void circle(Mat& img, Point center, int radius, const Scalar& color, int thickness = 1, int lineType = 8, int shift = 0)  
 + Mat& img : 원을 그릴 대상 행렬  
 + Point center : 원의 중심 좌표  
@@ -86,7 +86,7 @@ void circle(Mat& img, Point center, int radius, const Scalar& color, int thickne
 
 5. Threshold(Threshold 처리하기)  
 
-<함수 원형>  
+### 함수 원형  
 cv::threshold( src, dst, threshold_value, Max_value, threshold_type)  
 + src : 입력할 이미지 변수 (grayscale 이미지)  
 + dst : 필터가 적용되어 저장될 이미지 변수  
