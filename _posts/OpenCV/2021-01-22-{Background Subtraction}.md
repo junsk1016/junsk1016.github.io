@@ -88,7 +88,7 @@ int main(int argc, char* argv[])
 		//update the background model
 		pBackSub->apply(frame, fgMask);// apply : Computes a foreground mask.
 
-    // morphology
+    // morphology (실행 결과 노이즈가 많아 morphology 수행)
 		cv::Mat mask = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(3, 3), cv::Point(1, 1));
 		cv::morphologyEx(fgMask, fgMask, cv::MORPH_OPEN, mask);
 		threshold(fgMask, fgMask_M, 0, 1, cv::THRESH_BINARY);	// 0보다 크면 1로 변경
