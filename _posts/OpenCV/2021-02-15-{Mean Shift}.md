@@ -22,6 +22,7 @@ Mean Shift 이론에 대한 내용보다는 코딩 관련에 집중하여 포스
 
 ##### 공부한 곳  
 <https://darkpgmr.tistory.com/64>  
+<https://webnautes.tistory.com/1354>
 
 ## 1. Mean Shift?  
 ### [방법론적 이론]  
@@ -98,7 +99,7 @@ typedef를 통해서 함수포인터로 정의되어 있어 인수의 구조(인
 
 using namespace std;
 
-// 아래 줄을 주석처리하면 비디오 영상에 대해 동작
+// 아래 줄을 주석처리하면 비디오 영상에 대해 동작(조건부 컴파일)  
 //#define WEBCAM
 
 bool mouse_is_pressing = false;
