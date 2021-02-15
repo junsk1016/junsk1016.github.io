@@ -20,7 +20,7 @@ Calibration을 코드로 구현해보기 위해 공부한 것들을 정리해보
 
 틀린 부분이 있다면 댓글로 언제든지 환영입니다! 그럼 이제 시작해보겠습니다.  
 
-0. 공부한 곳
+##### 공부한 곳
 <https://darkpgmr.tistory.com/32>
 <https://computervision.tistory.com/2>
 <https://m.blog.naver.com/PostView.nhn?blogId=jinhuk1313&logNo=220592125874&proxyReferer=https:%2F%2Fwww.google.com%2F>
