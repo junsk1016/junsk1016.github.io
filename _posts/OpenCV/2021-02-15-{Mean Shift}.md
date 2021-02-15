@@ -24,13 +24,13 @@ Mean Shift 이론에 대한 내용보다는 코딩 관련에 집중하여 포스
 <https://darkpgmr.tistory.com/64>  
 <https://webnautes.tistory.com/1354>
 
-## 1. Mean Shift?  
-### [방법론적 이론]  
-#### Hill Climb 탐색 방법
+# 1. Mean Shift?  
+## [방법론적 이론]  
+### Hill Climb 탐색 방법
 + 가장 가까운 정상을 찾는 것  
 + `Mean Shift`, `Gradient Descent Search`, `Blind Search`, `Greedy Search` 등  
 
-#### Mean Shift
+### Mean Shift
 + 어떤 데이터 분포의 peak 또는 무게 중심을 찾는 한 방법  
 + 현재 자신의 주변에서 가장 데이터가 밀집된 방향으로 이동  
   - 언젠가는 분포 중심을 찾음  
@@ -48,36 +48,36 @@ Mean Shift 이론에 대한 내용보다는 코딩 관련에 집중하여 포스
 + 활용  
   - Object Tracking, Image Segmentation, Data Clustering, Image Smoothing  
 
-### [Mean Shift를 이용한 영상 추적 방법]
+## [Mean Shift를 이용한 영상 추적 방법]
 + Comaniciu, Ramesh, Meer, "Real-time tracking of non-rigid objects using mean shift", CVPR 2000  
-#### 아이디어  
+### 아이디어  
 + 추적하고자 하는 대상 물체에 대한 색상 히스토그램(histogram)과 현재 입력 영상의 히스토그램을 비교해서 가장 유사한 히스토그램을 갖는 윈도우 영역을 찾는 것  
 + 제한점? 모든 가능한 윈도우 위치에 대해 각 히스토그램을 구하고 비교를 하기 때문에 오랜 시간 소요  
-#### Histogram Backprojection 기법과 Mean Shift을 결합한 방법 제안  
+### Histogram Backprojection 기법과 Mean Shift을 결합한 방법 제안  
 + 영상에서 추적할 대상 정하기  
   - 해당 윈도우 영역에 대하여 히스토그램 구한 후 객체 모델로 저장  
 + Histogram Backprojection을 이용해 입력 영상의 픽셀 값들을 확률 값으로 변경  
 + 구한 확률 값 분포에 대해 Mean Shift 적용하여 물체의 위치 찾기  
   - 물체의 크기 변화까지 따라가고 싶으면 찾아진 위치에서 윈도우의 크기를 조절해 가면서 저장된 모델과 가장 히스토그램 유사도가 큰 스케일(scale) 선택  
 
-##### Histogram Backprojection ?
+#### Histogram Backprojection ?
 + 입력 이미지와 같은 크기이지만 하나의 채널만 가지는 이미지 생성하는 방법  
 + 이 이미지의 픽셀은 특정 오브젝트에 속할 확률을 의미  
 + 관심 오브젝트 영역에 속한 픽셀이 나머지 부분보다 더 흰색으로 표현  
 
-#### Mean Shift 적용  
+### Mean Shift 적용  
 + Histogram Backprojection을 통해 얻은 값을 일종의 확률값으로 생각 후 Mean shift에 적용  
 
-## 2. 코드에 사용된 함수    
-### 마우스 이벤트 제어  
+# 2. 코드에 사용된 함수    
+## 마우스 이벤트 제어  
 
-#### cv::setMouseCallback(const string& winname, MouseCallback onMouse, void*userdata = 0)  
+### cv::setMouseCallback(const string& winname, MouseCallback onMouse, void*userdata = 0)  
 사용자가 정의한 마우스 콜백 함수를 시스템에 등록하는 함수    
 + string& winname : 이벤트 발생을 체크할 윈도우 이름    
 + MouseCallback onMouse :  마우스 이벤트를 처리하는 콜백 함수 이름(함수 포인터)  
 + void* userdata : 이벤트 처리 함수로 전달할 추가적인 사용자 정의 인수  
 
-#### Typedef void(*MouseCallback) (int event, int x, int y, int flags, void* userdata)  
+### Typedef void(*MouseCallback) (int event, int x, int y, int flags, void* userdata)  
 발생한 마우스 이벤트에 대해서 처리 및 제어를 구현하는 콜백 함수  
 setMouseCallback() 함수의 두 번째 인수(함수 포인터)의 구현 부이기 때문에 함수명이 인수명과 같아야 함  
 typedef를 통해서 함수포인터로 정의되어 있어 인수의 구조(인수의 데이터 타입, 인수의 순서)를 유지해야 함  
@@ -86,9 +86,9 @@ typedef를 통해서 함수포인터로 정의되어 있어 인수의 구조(인
 + Int flags : 마우스 버튼과 동시에 특수 키(shift, alt, ctrl) 키가 눌러졌는지 여부 확인  
 + Void *userdata : 콜백 함수로 전달되는 추가적인 사용자 정의 인수  
 
-<center>![Flag](/img/Flag.PNG)</center>  
+![Flag](/img/Flag.PNG)  
 
-<center>![마우스](/img/마우스.PNG)</center>  
+![마우스](/img/마우스.PNG)  
 ---
 
 ## 코드  
