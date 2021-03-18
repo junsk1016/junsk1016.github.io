@@ -1,12 +1,12 @@
 ---
 layout: archive
-title: "GAN"
-permalink: /categories/GAN
+title: "Deep Learning"
+permalink: /categories/DeepLearning
 author_profile: true
 toc: true
 ---
 {% for category in site.categories %}
-  {% if category[0] == "GAN" %}
+  {% if category[0] == "DeepLearning" %}
     {% for post in category[1] %}
       {% include archive-single.html type=list %}
     {% endfor %}

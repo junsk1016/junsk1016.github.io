@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Test Posting - GAN"
+title: "Test Posting - DeepLearning"
 categories:
   - GAN
 classes: wide
@@ -12,6 +12,6 @@ tags:
   - GAN
 ---
 
-###### Category GAN Test!
+###### Category Deep Learning Test!
 
 ##### 제가 이해한 GAN에 대해 포스팅할 예정입니다.
