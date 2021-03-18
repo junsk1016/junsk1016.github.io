@@ -61,7 +61,7 @@ conda install opencv-python
 git clone https://github.com/gsethi2409/tf-pose-estimation.git
 cd ./tf-pose-estimation
 pip install -r requirements.txt
-conda install tf_slim
+pip install tf_slim
 cd ./tf_pose/pafprocess
 sudo apt install swig
 siwg -python -c++ pafprocess.i && python3 setup.py build_ext --inplace
