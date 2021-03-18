@@ -2,7 +2,7 @@
 layout: single
 title: "Test Posting - DeepLearning"
 categories:
-  - GAN
+  - DeepLearning
 classes: wide
 tags:
   - jeykll
