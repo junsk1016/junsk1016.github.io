@@ -9,7 +9,7 @@ tags:
   - github
   - Minimalmistakes
   - blog
-  - GAN
+  - DeepLearning
 ---
 
 ###### Category Deep Learning Test!
