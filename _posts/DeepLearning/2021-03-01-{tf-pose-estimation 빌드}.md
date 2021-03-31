@@ -20,7 +20,7 @@ comments: true
  + Openpose를 tensorflow로 바꾼 것  
  + 처음 올라온 것은 NOT Found가 떠서 다른 사람이 tensorflow2로 변형한 것을 빌드하였습니다.
 
-### https://github.com/gsethi2409/tf-pose-estimation
+https://github.com/gsethi2409/tf-pose-estimation
 위 링크에서 git clone을 하였습니다.  
 
 ## 2. 빌드 환경

@@ -21,7 +21,7 @@ comments: true
  + 논문 제목
   - Real-time multi-person keypoint detection library for body, face, hands, and foot estimation
  + Git 주소
-### https://github.com/CMU-Perceptual-Computing-Lab/openpose  
+https://github.com/CMU-Perceptual-Computing-Lab/openpose  
 
 
 ## 2. 빌드 환경
@@ -40,7 +40,7 @@ conda activate openpose
 ## 4. openpose 설치    
 https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation/0_index.md#windows-portable-demo  
 위 링크에서 `Windows Portable Demo`를 찾습니다. 그 방법대로 진행하면 됩니다.
- - https://github.com/CMU-Perceptual-Computing-Lab/openpose/releases 들어가서 gpu 버전으로 설치 후 압축 풀기
+https://github.com/CMU-Perceptual-Computing-Lab/openpose/releases 들어가서 gpu 버전으로 설치 후 압축 풀기
  - 저의 경우 압축을 푼 openpose를 꺼내놓았습니다.
 ```
 cd openpose
@@ -48,7 +48,7 @@ cd openpose
 
 ## 5. weight 받기
 다른 사람이 블로그에 weight를 친절히 올려놓아서 들어가서 설치합니다.  
-+ http://daddynkidsmakers.blogspot.com/2020/07/openpose.html  
+http://daddynkidsmakers.blogspot.com/2020/07/openpose.html  
 
 ```
 위 링크 들어가서 다운받아야 할 것
