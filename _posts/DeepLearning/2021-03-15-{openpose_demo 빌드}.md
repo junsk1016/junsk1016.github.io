@@ -62,7 +62,7 @@ http://daddynkidsmakers.blogspot.com/2020/07/openpose.html
 pose 폴더에서 body_25 폴더에는 BODY_25 weight를, coco 폴더에는 COCO weight를 넣습니다.
 
 ## 7. demo 돌리기
-
+https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/01_demo.md
 ```
 :: Windows - Portable Demo
 bin\OpenPoseDemo.exe
