@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "TF-pose-estimation 빌드하여 돌려보기 - Machine Learning"
+title: "TF-pose-estimation 빌드하여 돌려보기"
 categories:
   - DeepLearning
 classes: wide
