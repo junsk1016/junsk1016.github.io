@@ -70,4 +70,5 @@ bin\OpenPoseDemo.exe --camera 0
 bin\OpenPoseDemo.exe --camera 1
 
 hand를 사용할거면 뒤에 --hand를 넣으시면 되고 face까지 하고 싶으면 face weight를 다운 받아 폴더에 넣고 돌리면 됩니다.
+참고로 제 사양의 경우 hand 는 out of memory가 뜹니다.
 ```
