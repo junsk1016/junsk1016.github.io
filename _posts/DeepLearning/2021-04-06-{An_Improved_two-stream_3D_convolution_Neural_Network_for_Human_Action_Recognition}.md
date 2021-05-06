@@ -81,7 +81,7 @@ https://ieeexplore.ieee.org/abstract/document/8894962
     + 연속된 일련의 frame들 사이의 motion을 표현하기 위해, 본 논문의 연구에서는 L개의 연속 frame에서 optical flow channel을 쌓아 2L의 input channel 길이를 형성  
   - 모든 pixel 포인트에 대해 채널 $I_{t}(u, v, c)$ 는 L개의 연속 frame을 통해 해당 pixel에 대한 motion 정보를 인코딩 (c = 2L)  
 
-![Table1](img/two-stream-table1.jpg)  
+![Table1](/img/two-stream-table1.jpg)  
 
 + B. RGB and Optical Flow Feature Fusion  
   - Optical flow를 추출한 후에 ImageNet dataset으로 pre-trained된 two-stream CNN 학습  
@@ -128,7 +128,7 @@ https://ieeexplore.ieee.org/abstract/document/8894962
 
 + Experimental Result Analysis  
 
-![Table2](img/two-stream-table2.jpg)  
+![Table2](/img/two-stream-table2.jpg)  
 
   - Table 2.  
     + ImageNet pre-training two-stream과 pre-training하지 않은 two-stream 성능 비교  
@@ -137,7 +137,7 @@ https://ieeexplore.ieee.org/abstract/document/8894962
     + Layer가 더 많으므로 ResNet-101이 ResNet-34보다 Recognition rate가 더 높음  
     + 전체적 2-stream 3D CNN의 human action recognition rate가 single-stream CNN보다 증가  
 
-![Table3](img/two-stream-table3.jpg)  
+![Table3](/img/two-stream-table3.jpg)  
 
   - table 3.
     + 다른 sota handcrafted & classic 2-stream CNN 접근들과의 비교 (iDT, iDT+HDE, …)
