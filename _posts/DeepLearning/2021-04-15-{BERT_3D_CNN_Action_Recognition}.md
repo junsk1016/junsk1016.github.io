@@ -100,7 +100,7 @@ $y_{i} = PFFN\left ( \frac{1}{N(x)} \sum_{\forall j}^{}g(\mathbf{x}_{j})f(\mathb
 앞에 sumation이 있으니 모든 시간에 대해 pair로 계산하겠다는 의미이며 다른 말로, 시간 축에 attention을 주겠다는 의미이다.  
 + value : $g(x_{j})$ : $x_{j}$ 의 정보 = 위와 같음  
 
-위의 g,  $\theta$ , $\$phi$ 는 transformer 구조(BERT)처럼 matrix 연산으로 feature vector를 뽑고 논문에서는 이를 linear projection이라고 칭한다. 이 뒤에 FPPN() 연산을 한 것이 결과 yi가 된다.  
+위의 g,  $\theta$ , $\phi$ 는 transformer 구조(BERT)처럼 matrix 연산으로 feature vector를 뽑고 논문에서는 이를 linear projection이라고 칭한다. 이 뒤에 FPPN() 연산을 한 것이 결과 $y_{i}$가 된다.  
 
 BERT의 temporal attention mechanism 사용의 이점  
   + learn the convenient subspace  
@@ -200,7 +200,7 @@ BERT layer의 수를 늘리면 성능이 감소하였다. 원인으로 late temp
 
 ![SlowFast-Architecture](/img/BERT-3DCNN-Table7.jpg)  
 
-BERT를 사용한 것이 더 좋았고 IG65M dataset에 대해서도 pre-training 효과가 더 있엇음을 보여준다.  
+BERT를 사용한 것이 더 좋았고 IG65M dataset에 대해서도 pre-training 효과가 더 있었음을 보여준다.  
 
 ### Conclusions  
 TGAP를 제거하고 3D architecture의 output에서 temporal information을 더 잘 사용하는 첫 번째 연구임을 시사한다고 말한다.  
