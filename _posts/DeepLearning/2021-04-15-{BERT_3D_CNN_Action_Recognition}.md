@@ -91,7 +91,8 @@ Fig.1
 transformer 구조에 대해 자세한 설명은 하지 않지만 single head self-attention model of BERT에 대해 설명한다.  
 
 
-식은 다음과 같다.  $y_{i} = PFFN\left ( \frac{1}{N(x)} \sum_{\forall j}^{}g(\mathbf{x}_{j})f(\mathbf{x}_{i}, \mathbf{x}_{j}) \right)$  
+식은 다음과 같다.  
+$y_{i} = PFFN\left ( \frac{1}{N(x)} \sum_{\forall j}^{}g(\mathbf{x}_{j})f(\mathbf{x}_{i}, \mathbf{x}_{j}) \right)$  
 
 + query : $\theta (x_{i})$ = $x_{i}$ 의 정보 = 앞의 3D CNN에서 뽑은 output에서 i 번째 시간의 feature  
 + key : $\phi (x_{j})$ =  $x_{j}$ 의 정보 = 3D CNN에서 뽑은 output에서 특정 시간의 feature  
