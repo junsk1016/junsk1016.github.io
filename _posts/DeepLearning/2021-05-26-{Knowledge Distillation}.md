@@ -27,7 +27,7 @@ comments: true
 
 ## 아키텍처  
 
-![Architecture](/img/KnowledgeDistillation.jpg)  
+<p align="center"><img src="/img/KnowledgeDistillation.jpg"></p>  
 
 이미지 출처: https://nervanasystems.github.io/distiller/knowledge_distillation.html  
 
