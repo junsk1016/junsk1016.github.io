@@ -141,13 +141,18 @@ Instantiations
 
 ## Experiments: Action classification  
 Evaluate dataset  
+
 Kinetics-400  
 + 400 classes , 240k training , 20k validation videos  
+
 Kinetics-600  
 + 600 classes , 392k training , 30k validation videos  
+
 Kinetics dataset은 Top-1 & Top-5 classification accuracy로 평가  
+
 Charades  
 + 157 classes , 9.8k training , 1.8 validation videos , multi-label classifiaction  
+
 Charades dataset은 mAP로 평가  
 
 Training.  
