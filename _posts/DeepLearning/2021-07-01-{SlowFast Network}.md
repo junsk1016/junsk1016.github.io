@@ -130,11 +130,11 @@ Instantiations
   - Slow pathway feature shape = {T, $S^{2}$ , C}  
   - Fast pathway feature shape = {αT, $S^{2}$ , βC}  
   - Time-to-channel  
-    + {αT, $S^{2}$ , βC} -> {T, $S^{2}$ , C} 으로 reshape  
-    + 모든 α frame 을 one frame 의 채널로 pack  
+    + {αT, $S^{2}$ , βC} -> {T, $S^{2}$ , αβC} 으로 reshape과 transpose  
+    + 의미 : 모든 α frame 을 one frame 의 채널로 pack  
   - Time-strdied sampling  
     + 단순히 모든 α frame 중 하나를 sampling  
-    + {αT, $S^{2}$ , βC} -> {T, $S^{2}$ , C}  
+    + {αT, $S^{2}$ , βC} -> {T, $S^{2}$ , βC}  
   - Time-strided convolution  
     + 2βC output channel과 stride = α를 사용하여 5x$1^{2}$ 커널의 3D convolution 을 수행  
   - Lanteral connection 의 output 은 Slow pathway 와  summation or concatenation 으로 fusion  
