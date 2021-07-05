@@ -174,7 +174,7 @@ Dataset : AVA dataset
 + 초당 1 frame에 시공간 labeling되어 있으며 모든 사람은 bounding box로 주석  
 + 배우의 위치 파악은 쉬운 편이며 행동 감지가 어려운 편
 + AVA v2.1 dataset을 사용
-  - 211k training, 57k validation vvideo segment  
+  - 211k training, 57k validation video segment  
   - 60 classes
 + frame-level IOU threshold of 0.5을 평가   
 <p align="center"><img src="/img/SlowFast-Fig3.JPG"></p>  
