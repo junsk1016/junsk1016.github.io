@@ -77,13 +77,13 @@ Deep leaning 에서는 다른 input stream 으로 활용하였지만 end-to-end 
 ## SlowFast Networks  
 제안하는 SlowFast Network는 두 개의 서로 다른 프레임 속도에서 동작하는 single stream 아키텍처로 볼 수 있지만 저자는 생물학적 Parvo 및 Magnocellualr counterpart 와의 유사성을 반영하기 위해서 pathway 개념을 사용한다고 말한다. slow pathway 와 fast pathway를 거친 후 lateral connection으로 fusion 하는 것이 큰 그림이라고 보면 될 듯 하다.  
 
-<Slow pathway>  
+Slow pathway  
 + Spatiotemporal volume 을 가지고 있는 any convolution model이 될 수 있음  
 + 핵심 개념 : input frame의 킨 temporal stride τ (τ frame 마다 하나씩 처리)  
 + 일반적으로 τ=16 을 사용 (1초당 2 frame sampling )  
 + Sampling frame 수가 T 라면 raw clip length = T x τ  
 
-<Fast pathway>  
+Fast pathway  
 + High frame rate  
   - Small temporal stride $\frac{τ}{α}$ (α>1)을 사용 (α : Fast와 Slow pathway 의 frame rate ratio)  
   - α = 8 을 일반적으로 사용  
@@ -98,11 +98,13 @@ Deep leaning 에서는 다른 input stream 으로 활용하였지만 end-to-end 
   - 좋은 정확도를 달성하기 위해 lower channel capacity 사용한 점에서 다른 model과 구별  
 
 간단히 말해서, 우리의 Fast 경로는 Slow 경로와 유사한 convolution 네트워크지만 Slow pathway의 β(β <1) channel ratio를 갖는다. 일반적인 값은 우리 실험에서 β = 1/8이다. common layer의 계산(FLOP)은 종종 channel scaling ratio 측면에서 2 차적이다. 이것이 Fast pathway가 Slow pathway보다 계산 효율성을 높이는 이유다. Instantiation에서 Fast pathway는 일반적으로 전체 계산의 약 20 %를 차지한다. 흥미롭게도 Sec.1 에 따르면 영장류 시각 시스템에서 망막 세포의 ~ 15-20%가 M- 세포(빠른 움직임에 민감하지만 색상이나 공간 세부 사항이 아님)다.  
+
 낮은 channel capacity는 spatial semantic을 나타내는 능력이 약한 것으로 해석될 수도 있다. 기술적으로 우리의 Fast pathway는 spatical dimension에 대한 특별한 처리가 없으므로 Fast pathway의 spatical modeling capacity는 채널 수가 적기 때문에 느린 경로보다 낮아야 한다. 우리 모델의 좋은 결과는 Fast 경로가 spatial modeling 능력을 약화시키면서 temporal modeling 능력을 강화하는 것이 바람직한 trade-off임을 시사한다.  
+
 실험에서도, Fast pathway 에서 spatial capacity를 약화시키는 다양한 방법을 실험(input spatial resolution 감소, RGB information 제거 등)
   + 모두 우수한 정확도를 제공할 수 있으며 공간 용량이 적은 lightweight Fast pathway 가 유용함을 시사  
 
-<Lateral connections>  
+Lateral connections  
 <p align="center"><img src="/img/SlowFast-Fig1.jpg"></p>  
 
 + 두 pathway의 정보는 fusion되어 있으므로 서로 다른 pathway가 학습한 representation 인식 불가
@@ -110,7 +112,7 @@ Deep leaning 에서는 다른 input stream 으로 활용하였지만 end-to-end 
 + Fast pathway 의 feature 를 Slow pathway 로 fusion 하는 단방향 연결 사용  
 + 각 pathway 출력에 대해 global average pooling, concat, fully-connected layer  
 
-<Instantiations>  
+Instantiations  
 <p align="center"><img src="/img/SlowFast-Table1.jpg"></p>  
 + SlowFast idea 를 다른 backbone 및 implementation specific 으로 instantiation 할 수 있음  
 + Spatiotemporal size : T x S^2 (T : temporal length, S :  height and width of a square spatial crop)  
@@ -138,7 +140,7 @@ Deep leaning 에서는 다른 input stream 으로 활용하였지만 end-to-end 
   - Lanteral connection 의 output 은 Slow pathway 와  summation or concatenation 으로 fusion  
 
 ## Experiments: Action classification  
-<Evaluate dataset>  
+Evaluate dataset  
 Kinetics-400  
 + 400 classes , 240k training , 20k validation videos  
 Kinetics-600  
@@ -154,10 +156,10 @@ Kinectics dataset에 대해서 ImageNet과 같은 어떠한 pre-training을 하�
 Inference.  
 + 일반적인 관행에 따라 비디오에서 시간 축을 따라 10 개의 클립을 균일하게 샘플링
 
-<Main Results>  
+Main Results  
 <p align="center"><img src="/img/SlowFast-Table234.jpg"></p>  
 
-<Ablation Experiments>  
+Ablation Experiments  
 <p align="center"><img src="/img/SlowFast-Table5.JPG"></p>  
 
 ## Experiments: AVA Action Detection  
@@ -172,7 +174,7 @@ Dataset : AVA dataset
 + frame-level IOU threshold of 0.5을 평가   
 <p align="center"><img src="/img/SlowFast-Fig3.JPG"></p>  
 
-<Main Results>  
+Main Results  
 <p align="center"><img src="/img/SlowFast-Table7.jpg"></p>  
 
 ## Conclusion  
