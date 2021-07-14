@@ -96,7 +96,7 @@ Relation-net(Sung et al. 2018)에서 영감을 받아 얼굴 감정 인식 작�
 ## SMART Frame Selection  
 제안된 접근 방식은 최상의 프레임을 선택하는 데 전체 계산 비용의 작은 부분을 사용하도록 설계. 이러한 프레임은 계산 비용이 더 많이 드는 모델을 사용하여 분류. 따라서 SMART 프레임 선택 모델에 대한 입력으로 프레임의 매우 가벼운 표현을 사용.  
 
-<p align="center"><img src="/img/SMART-Fig1.jpg"></p>  
+<p align="center"><img src="/img/SMART-Fig1.JPG"></p>  
 
 모델은 두 개의 스트림으로 구성  
 + 첫 번째는 프레임 정보를 한 번에 하나씩 고려하여 각 프레임에 대한 점수 $δ_{i}$ 를 출력하여 프레임이 분류에 얼마나 유용한 지 나타냄.  
@@ -130,17 +130,17 @@ input sequence $X_{i}$ = ( $X_{1}, ... , X_{N}$ )이라고 할 때, $X_{i}$ 는 
 
 ##### Attention Module.  
 coarse self-attention weights $α_{i}$ 는 먼저 FC layer와 sigmoid function을 사용하여 계산된다(Meng et al. 2019). 수학적 표현은 식 1에 나와있다. U는 네트워크 parameter다. 이제 이러한 self-attention weights를 사용하여 input feature를 aggreate한다. 식 1의 $Z^{'}$ 는 프레임 feature의 global representation다.  
-<p align="center"><img src="/img/SMART-Eq1.jpg"></p>  
+<p align="center"><img src="/img/SMART-Eq1.JPG"></p>  
 
 ##### Relation Module.  
 Sample concatenation과 또 다른 FC layer(Sung et al. 2018)를 추가하여 relation-attention weight $β$ 를 estimate할 수 있다. $Θ^{1}$ 은 FC layer의 parameter고 $σ$ 는 sigmoid function을 나타낸다. 이를 사용하여 frame attention weight를 얻는다. 그러나 temporal attention weight도 필요하므로, LSTM을 사용하여 sequential per frame changes를 캡처한다. 각 time step에서 LSTM의 input은 relational self-attention weight ' $ω_{t}$ '를 사용한 dynamic weight의 합이다. 이는 식 2에 표시된다.  
-<p align="center"><img src="/img/SMART-Eq2.jpg"></p>  
+<p align="center"><img src="/img/SMART-Eq2.JPG"></p>  
 
 temporal attention weight는 아래 식 3과 4와 같이 계산된다. LSTM의 이전 time step output과 해당 time step의 input에 따라 다르다. b는 bias vector다.  
 <p align="center"><img src="/img/SMART-Eq34.jpg"></p>  
 
 Related-temporal weight를 계산하기 위해, 아래 식처럼 relational-frame attention weight를 얻는다. $Θ^{2}$ 는 네트워크 파라미터다.  
-<p align="center"><img src="/img/SMART-Eq5.jpg"></p>  
+<p align="center"><img src="/img/SMART-Eq5.JPG"></p>  
 
 이 γt를 사용하여 식 6에서 시간 't'에서 attend content vector $c_{t}$ 를 얻을 수 있다. 여기서 $h_{i}$ 는 $i$ 에서 LSTM의 hidden state를 나타낸다. classification을 위해, $c_{t}$ 는 예측 레이블 y를 생성하기 위해 MLP에 입력된다. 전체적으로, 이 모듈은 정답 레이블 $yˆ{t}$ 가 주어지면 식 7에 설명된 Loss $L_{cls}$ 를 최소화하는 것을 목표로 한다. 모든 attention weight와 intermediary를 계산하는 단계는 그림 2에서 볼 수 있다.  
 <p align="center"><img src="/img/SMART-Eq6.jpg"></p>  
