@@ -284,7 +284,7 @@ Web data가 도움이 되는 이유를 알아보기 위해 수집된 Web dataset
 ##### Effectiveness when labels are limited.  
 Limited labeled data의 유효성을 검증하기 위해 우리는 각각 3%, 10% 및 30%의 비율로 K400-tr의 3개 subsets을 구성합니다. Weaker teacher로 data filtering을 포함하여 전체 프레임워크를 다시 실행한다. K400-tr의 validation set에 대한 최종 결과는 그림 7에 있다. 우리의 프레임워크는 labeled video의 비율이 다양함에 따라 지속적으로 성능을 향상시킨다. 특히, gain은 데이터가 부족할 때 더 중요하다. (3% labeled data로 30% 이상의 상대적 증가.)  
 
-<p align="center"><img src="/img/Omni-FIg6.JPG"></p>  
+<p align="center"><img src="/img/Omni-Fig6.JPG"></p>  
 
 ##### Balancing between the target and auxiliary dataset.  
 Target dataset | $B_{T}$ | 와 Auxiliary dataset | $B_{A}$ |의 batch size 사이의 비율을 조정하여 그림 8에서 정확도를 얻는다. 우리는 3가지 시나리오를 테스트한다.  
