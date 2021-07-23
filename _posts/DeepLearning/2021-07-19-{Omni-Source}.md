@@ -121,7 +121,7 @@ Deep model에서는
 Target task(예: trimmed video recognition)과 해당 대상 데이터 세트 $D_{T}$ = ${(x_{i} , y_{i} )}$ 가 주어지면 unlabeled web resource $U$ = $U_{1} ∪ · · · ∪ U_{n}$ 를 활용하는 것을 목표로 한다(여기서 $U_{i} $ ) 는 특정 source 또는 format의 unlabeled를 나타냄).  
 + 첫째, $U_{i}$ 에서 pseudo-labeled dataset $\hat{D}_{i}$ 를 구성  
   - confidence가 낮은 sample은 $D_{T}$ 에 대해 학습된 teacher model $M$ 을 사용하여 제거하고 나머지 데이터는 pseudo-labeled $\hat{y}$ = $PseudoLabel(M(x))$ 로 할당    
-+ 둘째, specific format(예: still images, long videos)의 데이터를 대상 작업의 data format(우리의 경우 trimmed video)으로 처리하기 위해 적절한 변환 $T_{i}(x)$ : $\hat{D}_{i} → D_{A,i}$ 를 고안한다. auxiliary dataset $D_{A}$ 가 되도록 $D_{A,i}$ 의 합집합을 나타낸다.  
++ 둘째, specific format(예: still images, long videos)의 데이터를 대상 작업의 data format(우리의 경우 trimmed video)으로 처리하기 위해 적절한 변환 $T_{i}(x)$ : $\hat{D}_{i}$ → $D_{A,i}$ 를 고안한다. auxiliary dataset $D_{A}$ 가 되도록 $D_{A,i}$ 의 합집합을 나타낸다.  
 + 마지막으로, 모델 $M_{0}$ (무조건 원래 M은 아님)은 $D_{T}$와 $D_{A}$ 에 대해 jointly train될 수 있다.  
 각 반복에서 우리는 각각 $D_{T}$ , $D_{A}$ 에서 데이터 $B_{T}$ , $B_{A}$ 의 두 개의 mini-batch를 샘플링한다. Loss는 Eq 1로 표시된 $B_{T}$ 와 $B_{A}$ 의 cross entropy loss의 합이다.  
 
@@ -247,7 +247,7 @@ Image의 경우 GG-k400과 IG-img의 조합을 사용하면 Top-1 정확도가 �
 #### Do multiple sources outperform a single source?  
 의문점 : Multiple source의 web data가 target dataset에 공동으로 기여할 수 있음을 확인하면서 동일한 budget을 가진 single source보다 multiple source가 여전히 더 나은지 궁금  
 
-주장 : 이를 확인하기 위해서 K400-tr 및 $D_{A}$ = GG-k400 + IG-img 모두에서 TSN을 학습하는 경우를 고려해보자. Auxilary dataset의 스케일을 GG-k400의 스케일로 고정하고 GG-k400의 이미지를 IG-img의 이미지로 교체하여 GG-k400과 IG-img의 비율을 변경한다. 그림 4에서 | $D_{A}$ |를 증가시키지 않고 0.3%의 개선을 관찰했으며, 이는 multi source가 다양성을 도입하여 보완적인 정보를 제공함을 나타낸다.  
+주장 : 이를 확인하기 위해서 K400-tr 및 $D_{A}$ = GG-k400 + IG-img 모두에서 TSN을 학습하는 경우를 고려해보자. Auxilary dataset의 스케일을 GG-k400의 스케일로 고정하고 GG-k400의 이미지를 IG-img의 이미지로 교체하여 GG-k400과 IG-img의 비율을 변경한다. 그림 4에서 $| D_{A} |$ 를 증가시키지 않고 0.3%의 개선을 관찰했으며, 이는 multi source가 다양성을 도입하여 보완적인 정보를 제공함을 나타낸다.  
 
 #### Does OmniSource work with different architectures?  
 우리는 광범위한 아키텍처에 대한 추가 실험을 수행하고 표 3의 결과를 얻었다. TSN의 경우 OmniSource가 Top-1 정확도를 1.9% 향상시키는 backbone으로 EfficientNet-B4[43]를 대신 사용한다. 3D-ConvNet의 경우 더 긴 input이 필요하고 더 큰 backbone을 갖는 SlowOnly-8x8-ResNet101 기준선에서 실험을 수행한다. 프레임워크는 이 경우에도 잘 동작하여 scratch training할 때 Top-1 accuracy를 76.3%에서 80.4%로, ImageNet pre-training을 통해 76.8%에서 80.5%로 개선한다. 더 큰 네트워크의 성능 향상은 더 높으며, 더 깊은 네트워크는 video data의 부족으로 고통받는 경향이 있으며 OmniSource가 이를 완화할 수 있음을 나타낸다.  
