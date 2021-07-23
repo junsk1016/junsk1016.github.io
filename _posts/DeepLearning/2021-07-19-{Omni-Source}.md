@@ -118,12 +118,12 @@ Deep model에서는
 + 프레임워크는 다양한 소스(search engine, social media, video sharing platform)의 다양한 형태(images, trimmed videos, untrimmed videos)의 web data를 통합된 방식으로 활용  
 
 ### [3.2 Framework formulation]  
-Target task(예: trimmed video recognition)과 해당 대상 데이터 세트 $D_{T}$ = ${(x_{i} , y_{i} )}$ 가 주어지면 unlabeled web resource $U$ = $U_{1} ∪ · · · ∪ U_{n}$ 를 활용하는 것을 목표로 한다(여기서 $U_{i}) 는 특정 source 또는 format의 unlabeled를 나타냄).  
+Target task(예: trimmed video recognition)과 해당 대상 데이터 세트 $D_{T}$ = ${(x_{i} , y_{i} )}$ 가 주어지면 unlabeled web resource $U$ = $U_{1} ∪ · · · ∪ U_{n}$ 를 활용하는 것을 목표로 한다(여기서 $U_{i} $ ) 는 특정 source 또는 format의 unlabeled를 나타냄).  
 + 첫째, $U_{i}$ 에서 pseudo-labeled dataset $\hat{D}_{i}$ 를 구성  
   - confidence가 낮은 sample은 $D_{T}$ 에 대해 학습된 teacher model $M$ 을 사용하여 제거하고 나머지 데이터는 pseudo-labeled $\hat{y}$ = $PseudoLabel(M(x))$ 로 할당    
-+ 둘째, specific format(예: still images, long videos)의 데이터를 대상 작업의 data format(우리의 경우 trimmed video)으로 처리하기 위해 적절한 변환 $Ti(x)$ : $Dbi → D_{A,i}$ 를 고안한다. auxiliary dataset $D_{A}$ 가 되도록 $D_{A,i}$ 의 합집합을 나타낸다.  
++ 둘째, specific format(예: still images, long videos)의 데이터를 대상 작업의 data format(우리의 경우 trimmed video)으로 처리하기 위해 적절한 변환 $T_{i}(x)$ : $\hat{D}_{i} → D_{A,i}$ 를 고안한다. auxiliary dataset $D_{A}$ 가 되도록 $D_{A,i}$ 의 합집합을 나타낸다.  
 + 마지막으로, 모델 $M_{0}$ (무조건 원래 M은 아님)은 $D_{T}$와 $D_{A}$ 에 대해 jointly train될 수 있다.  
-각 반복에서 우리는 각각 $D_{T}$ , $D_{A}$ 에서 데이터 $B_{T}$ , $B_{A}$ 의 두 개의 mini-batch를 샘플링한다. Loss는 Eq 1로 표시된 $B_{T}$ 와 $B_{A}$ 의 corss entropy loss의 합이다.  
+각 반복에서 우리는 각각 $D_{T}$ , $D_{A}$ 에서 데이터 $B_{T}$ , $B_{A}$ 의 두 개의 mini-batch를 샘플링한다. Loss는 Eq 1로 표시된 $B_{T}$ 와 $B_{A}$ 의 cross entropy loss의 합이다.  
 
 <p align="center"><img src="/img/Omni-Eq1.JPG"></p>  
 
@@ -141,12 +141,15 @@ Web에서 크롤링하는 데이터는 필연적으로 noisy하다. 수집된 we
 <p align="center"><img src="/img/Omni-Fig2.JPG"></p>  
 
 ### [3.5 Transforming to the target domain]  
-Web Images. Video recognition training을 위한 web images를 준비하기 위해 이미지를 pseudo(유사) 비디오로 변환하는 몇 가지 방법을 고안한다.
+#####Web Images.  
+Video recognition training을 위한 web images를 준비하기 위해 이미지를 pseudo(유사) 비디오로 변환하는 몇 가지 방법을 고안한다.
 + 첫 번째 순진한 방법은 이미지를 n번 복사하여 n-frame clip을 형성하는 것이다. 그러나 이러한 clip은 시간이 지남에 따라 시각적으로 변하는 static clip과 natural videos 사이에 가시적인 gap이 있기 때문에 최적이 아닐 수 있다.
-+ 따라서 우리는 moving camera로 보는 static images로부터 vidoe clip을 생성하는 것을 제안한다. 이미지 I가 주어졌을 때 standard perspective projection model[10]에서 다른 perspective(원근) Ie를 가진 이미지는 homographic transform $H ∈ R$ 3×3, 즉 $\tilde{I} = H(I) = F(I; H)$ 이다. $J_{1} = I$ 에서 시작하여 I에서 클립 $J$ = {J_{1}, · · · , J_{N} }$ 을 생성하려면 식 (2)가 있다.  
++ 따라서 우리는 moving camera로 보는 static images로부터 vidoe clip을 생성하는 것을 제안한다. 이미지 I가 주어졌을 때 standard perspective projection model[10]에서 다른 perspective(원근) $\tilde{I}$ 를 가진 이미지는 homographic transform $H ∈ R$ 3×3, 즉 $\tilde{I} = H(I) = F(I; H)$ 이다. $J_{1} = I$ 에서 시작하여 I에서 클립 $J$ = ${J_{1}, · · · , J_{N} }$ 을 생성하려면 식 (2)가 있다.  
 
 각 행렬 $H_{i}$ 는 multivariate Gaussian distrimbution N(μ, Σ)에서 무작위로 샘플링되는 반면 parameter μ와 Σ는 원본 video source에 대한 maximum likelihood estimation을 사용하여 추정된다. pseudo videos를 얻으면, trimmed video dataset을 사용하여 joint training을 위해 web images를 활용할 수 있다.  
-Untrimmed Videos. Untrimmed videos는 web data의 중요한 부분을 형성한다. video recognition에서 untrimmed video를 활용하기 위해 2D 및 3D 아키텍처에 대해 각각 다른 변환을 채택한다.
+
+##### Untrimmed Videos.  
+Untrimmed videos는 web data의 중요한 부분을 형성한다. video recognition에서 untrimmed video를 활용하기 위해 2D 및 3D 아키텍처에 대해 각각 다른 변환을 채택한다.
 2D TSN의 경우, 전체 비디오에서 드물게 샘플링된 snippet이 입력으로 사용된다. 먼저 낮은 프레임 속도(1FPS)로 전체 비디오에서 프레임을 추출한다. 2D teacher는 각 프레임의 confidence score를 얻는 데 사용되며 프레임도 positive와 negative frame으로 나눈다. 실제로 우리는 snippet을 구성하기 위해 positive frame만 사용하는 것이 차선책이라는 것을 알게 되었다. 대신에 negative frame과 positive frame을 결합하면 더 harder example이 만들어지고 결과적으로 더 나은 recognition performance를 얻을 수 있다. 우리의 실험에서는 1개의 positive frame과 2개의 negative frame을 사용하여 3-snippet input을 구성한다.
 3D ConvNet의 경우 video clip(조밀하게 샘플링된 연속 프레임)이 입력으로 사용됩니다. 먼저 untirmmed video를 10초 clip으로 자른 다음 3D teacher를 사용하여 confidence score를 얻는다. Joint training에는 positive clip만 사용된다.
 
@@ -227,24 +230,26 @@ Mixup[57]은 이미지 인식에서 널리 사용되는 전략이다. 학습을 
 
 ### [5.2 Verifying the efficacy of OmniSource]  
 몇 가지 질문을 검토하여 프레임워크의 효율성을 확인합니다.  
-#### Why do we need teacher filtering and are search results good enough?
-(교사 필터링이 필요한 이유와 검색 결과가 충분히 좋은 이유는 무엇입니까?)
-의문점 : Filtering을 위한 teacher network의 필요성
-+ 근거 : 최신 search engine이 검색 결과 생성을 돕기 위해 대규모 labeled data에 대해 학습된 visual recognition model을 내부적으로 활용했을 수 있다는 인상이 있음  
-주장 :  web data가 본질적으로 noisy하고 반환된 결과의 거의 절반이 관련이 없음. 정량적으로 보면 web data의 70% - 80%가 teacher에 의해 제거된다. 반면, teacher filtering 없이 실험을 수행해보면, joint training을 위해 수집된 web data를 직접 사용하면 TSN에서 상당한(3% 이상) 성능 저하가 발생한다. 따라서 이는 크롤링된 web data에서 유용한 정보를 유지하면서 쓸모 없는 정보를 제거하는 데 teacher filtering이 필요함을 보여준다.  
+#### Why do we need teacher filtering and are search results good enough?  
 
-#### Does every data source contribute? (모든 데이터 소스가 기여합니까?)
+의문점 : Filtering을 위한 teacher network의 필요성  
+
++ 근거 : 최신 search engine이 검색 결과 생성을 돕기 위해 대규모 labeled data에 대해 학습된 visual recognition model을 내부적으로 활용했을 수 있다는 인상이 있음  
++ 주장 :  web data가 본질적으로 noisy하고 반환된 결과의 거의 절반이 관련이 없음. 정량적으로 보면 web data의 70% - 80%가 teacher에 의해 제거된다. 반면, teacher filtering 없이 실험을 수행해보면, joint training을 위해 수집된 web data를 직접 사용하면 TSN에서 상당한(3% 이상) 성능 저하가 발생한다. 따라서 이는 크롤링된 web data에서 유용한 정보를 유지하면서 쓸모 없는 정보를 제거하는 데 teacher filtering이 필요함을 보여준다.  
+
+#### Does every data source contribute?
 Images, Trimmed video 및 Untrimmed video와 같은 다양한 source type의 기여도를 살펴본다. 각 data source에 대해 auxiliary dataset를 구성하고 K400-tr과의 joint training에 사용한다. 표 13의 결과는 모든 source가 target task의 정확도 향상에 기여한다는 것을 보여준다. combine하면 성능이 더욱 향상된다.  
 
 <p align="center"><img src="/img/Omni-Table13.JPG"></p>  
 
 Image의 경우 GG-k400과 IG-img의 조합을 사용하면 Top-1 정확도가 약 1.4% 증가한다. Trimmed video의 경우 IG-vid에 중점을 둔다. 극도로 불균형하지만 IG-vid는 여전히 모든 설정에서 Top-1 정확도를 1.0% 이상 향상시킨다. Untrimmed video의 경우 Untrimmed Kinetics-400(K400-untr) 버전을 비디오 source로 사용하며 잘 작동하는 것으로 나타났다.  
 
-#### Do multiple sources outperform a single source?(여러 소스가 단일 소스보다 성능이 좋습니까?)
-의문점 : Multiple source의 web data가 target dataset에 공동으로 기여할 수 있음을 확인하면서 동일한 budget을 가진 single source보다 multiple source가 여전히 더 나은지 궁금
+#### Do multiple sources outperform a single source?  
+의문점 : Multiple source의 web data가 target dataset에 공동으로 기여할 수 있음을 확인하면서 동일한 budget을 가진 single source보다 multiple source가 여전히 더 나은지 궁금  
+
 주장 : 이를 확인하기 위해서 K400-tr 및 $D_{A}$ = GG-k400 + IG-img 모두에서 TSN을 학습하는 경우를 고려해보자. Auxilary dataset의 스케일을 GG-k400의 스케일로 고정하고 GG-k400의 이미지를 IG-img의 이미지로 교체하여 GG-k400과 IG-img의 비율을 변경한다. 그림 4에서 | $D_{A}$ |를 증가시키지 않고 0.3%의 개선을 관찰했으며, 이는 multi source가 다양성을 도입하여 보완적인 정보를 제공함을 나타낸다.  
 
-#### Does OmniSource work with different architectures?(OmniSource는 다른 아키텍처에서 작동합니까?)
+#### Does OmniSource work with different architectures?  
 우리는 광범위한 아키텍처에 대한 추가 실험을 수행하고 표 3의 결과를 얻었다. TSN의 경우 OmniSource가 Top-1 정확도를 1.9% 향상시키는 backbone으로 EfficientNet-B4[43]를 대신 사용한다. 3D-ConvNet의 경우 더 긴 input이 필요하고 더 큰 backbone을 갖는 SlowOnly-8x8-ResNet101 기준선에서 실험을 수행한다. 프레임워크는 이 경우에도 잘 동작하여 scratch training할 때 Top-1 accuracy를 76.3%에서 80.4%로, ImageNet pre-training을 통해 76.8%에서 80.5%로 개선한다. 더 큰 네트워크의 성능 향상은 더 높으며, 더 깊은 네트워크는 video data의 부족으로 고통받는 경향이 있으며 OmniSource가 이를 완화할 수 있음을 나타낸다.  
 
 <p align="center"><img src="/img/Omni-Table3.JPG"></p>  
@@ -261,7 +266,7 @@ OmniSource는 target video recognition task을 위해 설계되었지만 learned
 제안되는 프레임워크는 다양한 domain에서도 효과적이고 효율적이다. Youtube-car (fine-grained recognition benchmark) 를 위해서, 학습을 위한 50K web image(GG-car)와 17K web video(YT-car-17k)를 수집한다. 표 5는 성능 향상이 중요함을 보여준다. Top-1 정확도와 mAP 모두에서 5% 향상을 얻는다. UCF-101에서 BNInception을 백본으로 사용하여 2-stream TSN 네트워크를 학습한다. RGB stream은 GG-UCF를 사용 또는 사용하지 않고 학습된다. 결과는 표 6에 있다. RGB stream의 Top-1 정확도는 2.7% 향상된다. Flow stream과 융합될 때 여전히 1.1%의 향상이 있다.  
 
 #### Where does the performance gain come from?  
-Web data가 도움이 되는 이유를 알아보기 위해 수집된 Web dataset를 더 깊이 파고들어 개별 클래스의 개선 사항을 분석한다. 우리는 GG-k400을 사용 또는 사용하지 않고 학습된 TSN-3seg-R50을 선택한다. 여기서 개선은 평균 0.9% 이다. 우리는 주로 web image가 개선할 수 있는 confusion pair에 중점을 둔다. 우리는 class pair의 confusion score를 $s_{ij}$ = $(n_{ij} + n_{ji}) / (n_{ij} + n_{ji} + n_{ii} + n_{jj} )로 정의한다. 여기서 $n_{ij}$ 는 클래스 j로 인식되는 동안 ground-truth가 클래스 i인 이미지의 수를 나타낸다. 낮은 confusion score는 두 클래스 간의 더 나은 판별력을 나타낸다. 그림 5에서 몇 가지 confusing pair을 시각화한다. 우리는 개선이 주로 두 가지 이유에 기인할 수 있음을 발견했다.  
+Web data가 도움이 되는 이유를 알아보기 위해 수집된 Web dataset를 더 깊이 파고들어 개별 클래스의 개선 사항을 분석한다. 우리는 GG-k400을 사용 또는 사용하지 않고 학습된 TSN-3seg-R50을 선택한다. 여기서 개선은 평균 0.9% 이다. 우리는 주로 web image가 개선할 수 있는 confusion pair에 중점을 둔다. 우리는 class pair의 confusion score를 $s_{ij}$ = $(n_{ij} + n_{ji}) / (n_{ij} + n_{ji} + n_{ii} + n_{jj})$ 로 정의한다. 여기서 $n_{ij}$ 는 클래스 j로 인식되는 동안 ground-truth가 클래스 i인 이미지의 수를 나타낸다. 낮은 confusion score는 두 클래스 간의 더 나은 판별력을 나타낸다. 그림 5에서 몇 가지 confusing pair을 시각화한다. 우리는 개선이 주로 두 가지 이유에 기인할 수 있음을 발견했다.  
 + (1) Web data는 일반적으로 주요 작업 개체에 초점을 맞춤  
    - 예 : Confusion score 감소가 가장 큰 pair에서 "drinking beer" 대 "drinking shots" 및 "eating hotdog" 대 "eathing chips"와 같은 pair이 있음을 발견  
    - Web data를 사용한 학습은 일부 혼란스러운 경우에 더 나은 object recognition ability으로 이어짐  
