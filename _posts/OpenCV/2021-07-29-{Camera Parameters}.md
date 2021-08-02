@@ -25,18 +25,18 @@ comments: true
 # Camera Parameters  
 ### Goal : Describe How a 3D Point is Mapped to a 2D Pixel Coordinate  
 #### Coordinate System  
-+ 1. World/Object coordinate system : $S_{o} = \begin{bmatrix} X & Y & Z \end{bmatrix}^{T}$  
-+ 2. Camera coordinate system : $S_{k} = \begin{bmatrix} ^{k}\textrm{X} & ^{k}\textrm{Y} & ^{k}\textrm{Z} \end{bmatrix}^{T}$  
-+ 3. Image (plane) coordinate system : $S_{c} = \begin{bmatrix} ^{c}\textrm{x} & ^{c}\textrm{y} \end{bmatrix}^{T}$  
-+ 4. Sensor coordinate system : $S_{s} = \begin{bmatrix} ^{s}\textrm{x} & ^{s}\textrm{y} \end{bmatrix}^{T}$  
++ World/Object coordinate system : $S_{o} = \begin{bmatrix} X & Y & Z \end{bmatrix}^{T}$  
++ Camera coordinate system : $S_{k} = \begin{bmatrix} ^{k}\textrm{X} & ^{k}\textrm{Y} & ^{k}\textrm{Z} \end{bmatrix}^{T}$  
++ Image (plane) coordinate system : $S_{c} = \begin{bmatrix} ^{c}\textrm{x} & ^{c}\textrm{y} \end{bmatrix}^{T}$  
++ Sensor coordinate system : $S_{s} = \begin{bmatrix} ^{s}\textrm{x} & ^{s}\textrm{y} \end{bmatrix}^{T}$  
 
 Coordinate system은 위와 같이 4개로 표현할 수 있으며 최종적으로 sensor system의 좌표를 표현하면 아래와 같습니다.  
 
-$\begin{bmatrix} ^{s}\textrm{x}\\ ^{s}\textrm{y}\\ 1\end{bmatrix}$ = $^{s}\textrm{H}_{c}$ $^{c}\textrm{P}_{k}$ $^{k}\textrm{H}_{o}$ $\begin{bmatrix} X \\ Y \\ Z \\ 1 \end{bmatrix}$  
+*$\begin{bmatrix} ^{s}\textrm{x}\\ ^{s}\textrm{y}\\ 1\end{bmatrix}$* = *$^{s}\textrm{H}_{c}$ $^{c}\textrm{P}_{k}$* *$^{k}\textrm{H}_{o}$* *$\begin{bmatrix} X \\ Y \\ Z \\ 1 \end{bmatrix}$*  
 
-+ $\begin{bmatrix} ^{s}\textrm{x}\\ ^{s}\textrm{y}\\ 1\end{bmatrix}$ : in the sensor system  
-+ $^{s}\textrm{H}_{c}$ : image plane to sensor  
-+ $^{c}\textrm{P}_{k}$ : camera to image  
++ *$\begin{bmatrix} ^{s}\textrm{x}\\ ^{s}\textrm{y}\\ 1\end{bmatrix}$* : in the sensor system  
++ *$^{s}\textrm{H}_{c}$* : image plane to sensor  
++ *$^{c}\textrm{P}_{k}$* : camera to image  
 + $^{k}\textrm{H}_{o}$ : object to camera  
 + $\begin{bmatrix} X \\ Y \\ Z \\ 1 \end{bmatrix}$ : in the object system  
 
