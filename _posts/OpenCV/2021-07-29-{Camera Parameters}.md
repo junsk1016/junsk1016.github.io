@@ -56,7 +56,7 @@ Coordinate system은 위와 같이 4개로 표현할 수 있으며 최종적으�
 
 우리가 변경할 수 있는 것은 Translate 와 Rotate입니다. 이것들은 총 6개의 파라미터(3개의 position과 3개의 heading)로 구성이 되어있고 이 6개로 내 카메라의 위치와 방향을 의미하는 Pose(position and heading)을 설명하여야 합니다.  
 
-먼저 notation을 정의하여야 합니다.  World 좌표를 $\textbf{\textit{X}}_{p}$ = *$\begin{bmatrix} \textit{X}_{p} & \textit{Y}_{p} & \textit{Z}_{p} \end{bmatrix}^{T}$* 로 정의하고 Projection 좌표를 $\textbf{\textit{X}}_{O}$ = *$\begin{bmatrix} \textit{X}_{O} & \textit{Y}_{O} & \textit{Z}_{O} \end{bmatrix}^{T}$* 로 정의하겠습니다. 여기서 Projection 좌표는 카메라 좌표계의 원점이라고 보시면 됩니다.  
+먼저 notation을 정의하여야 합니다.  World 좌표를 $\textbf{\textit{X}}_{p} = \begin{bmatrix} \textit{X}_{p} & \textit{Y}_{p} & \textit{Z}_{p} \end{bmatrix}^{T}$ 로 정의하고 Projection 좌표를 $\textbf{\textit{X}}_{O} = \begin{bmatrix} \textit{X}_{O} & \textit{Y}_{O} & \textit{Z}_{O} \end{bmatrix}^{T}$ 로 정의하겠습니다. 여기서 Projection 좌표는 카메라 좌표계의 원점이라고 보시면 됩니다.  
 
 그렇다면 World coordinate와 Origin coordinate 사이의 translation은 아래와 같이 표현됩니다. 식의 유도는 하지 않겠습니다.
 
