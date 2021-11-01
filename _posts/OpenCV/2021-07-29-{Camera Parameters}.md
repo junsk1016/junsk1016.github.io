@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Camera Parameters - Extrinsics & Intrinsics"
+title: "Camera Parameters - Extrinsics & Intrinsics (Photogrammetry)"
 categories:
   - OpenCV
 classes: wide
