@@ -116,7 +116,7 @@ Rotation matrix $r_{1}$ , $r_{2}$ 는 orthonomal basis하다는 성질을 이용
 
 ##### 제약 조건 및 현실에서의 noise 고려하기  
 
-$Vb$ = 0 에서 Trivial solution을 가질 수 있으므로 $\left \|b  \right \|$ = 1 제약 조건을 추가하게 되고, 현실에서의 Real measurement는 noisy하므로 square error를 최소화하는 solution을 찾아야 합니다. 아래와 같습니다.  
+$Vb$ = 0 에서 Trivial solution을 가질 수 있으므로 $\left \|\|b  \right \|\|$ = 1 제약 조건을 추가하게 되고, 현실에서의 Real measurement는 noisy하므로 square error를 최소화하는 solution을 찾아야 합니다. 아래와 같습니다.  
 
 <p align="center"><img src="/img/Zhangs-16.jpg"></p>  
 
