@@ -70,9 +70,9 @@ comments: true
 
 지금 헷갈리지 말아야할 것은 지금 하나의 이미지에서 계산중이라는 것입니다. 하나의 이미지에서 여러개의 포인트에 대해 SVD를 구했고 H까지 구한 것입니다. 그러면 이제 다시 K를 구해보겠습니다. 순서를 간단하게 적어보겠습니다.  
 
-+ 1. $K$ , $r_{1}$ , $r_{2}$ 에 대한 제약 조건 활용  
-+ 2. Matrix $B$ = $K^{-T}$ $K^{-1}$ 을 정의  
-+ 3. $B$ 를 구한 후 decompose  
++ $K$ , $r_{1}$ , $r_{2}$ 에 대한 제약 조건 활용  
++ Matrix $B$ = $K^{-T}$ $K^{-1}$ 을 정의  
++ $B$ 를 구한 후 decompose  
 
 먼저 $K$ , $r_{1}$ , $r_{2}$ 에 대한 제약 조건을 활용해봅시다. $K$ 는 역행렬이 가능한 matrix이므로 양변에 $K^{-1}$ 을 곱합니다. 현재 H는 구해서 알고있는 값인 것을 유의하시길 바랍니다.  
 
@@ -116,7 +116,7 @@ Rotation matrix $r_{1}$ , $r_{2}$ 는 orthonomal basis하다는 성질을 이용
 
 ##### 제약 조건 및 현실에서의 noise 고려하기  
 
-$Vb$ = 0 에서 Trivial solution을 가질 수 있으므로 $||b||$ = 1 제약 조건을 추가하게 되고, 현실에서의 Real measurement는 noisy하므로 square error를 최소화하는 solution을 찾아야 합니다. 아래와 같습니다.  
+$Vb$ = 0 에서 Trivial solution을 가질 수 있으므로 $\left \|b  \right \|$ = 1 제약 조건을 추가하게 되고, 현실에서의 Real measurement는 noisy하므로 square error를 최소화하는 solution을 찾아야 합니다. 아래와 같습니다.  
 
 <p align="center"><img src="/img/Zhangs-16.jpg"></p>  
 
