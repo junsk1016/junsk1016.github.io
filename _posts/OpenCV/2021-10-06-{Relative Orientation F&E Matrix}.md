@@ -83,7 +83,7 @@ projective transform은 15개의 파라미터를 가지기 때문에 2개의 이
 
 돌아와서 이 속성을 카메라에 대해 무엇을 할 수 있는지를 생각해보면, 카메라가 3D point를 projection 한다는 것입니다.
 
-먼저 벡터 O'X'와 O"X"는 iamge coordinate x',x"에서 파생될 수 있습니다. 따라서 x'=P'X, x"=P"X이며, projection matrix는 P'=K'R'[ $I_{3} \|$ - $X_{O'} $ ], P"=K"R"[ $I_{3} \|$ - $X_{O"} $ ]입니다. 그리고 O'X'와 O"X"는 카메라의 calibrated matrix를 고려하여 계산할 수 있는 vector입니다.  
+먼저 벡터 O'X'와 O"X"는 iamge coordinate x',x"에서 파생될 수 있습니다. 따라서 x'=P'X, x"=P"X이며, projection matrix는 P'=K'R'[ $I_{3} \|$ - $X_{O'} $ ], P"=K"R"[ $I_{3} \|$ - $X_{O''} $ ]입니다. 그리고 O'X'와 O"X"는 카메라의 calibrated matrix를 고려하여 계산할 수 있는 vector입니다.  
 
 ##### Direction to a Point  
 
@@ -103,9 +103,9 @@ Base Vector O'O"는 projection center의 차로 바로 얻을 수 있습니다. 
 
 두 번째 줄에서 세 번째 줄로 넘어가는 건 외적을 내적으로 표현한 것이고 그 결과 가운데 $S_{b}$ 가 skew-symmetric matrix가 됩니다. 마지막 식을 위에서 구한 것들로 채우면 완성하게 됩니다.  
 
-<p align="center"><img src="/img/Relative_Orientation_Fig8.jpg"></p>  
+<p align="center"><img src="/img/Relative_Orientation_Fig8.JPG"></p>  
 
-이 F를 fundamental matrix라고 부르며 uncalibrated camera일 때의 경우입니다. 이 matrix는 하나의 respect하는 camera의 RO에 대해 estimate할 수 있는 모든 파라미터를 설명하고, 7 DoF(=22-15)를 가집니다. 결과적으로, $x'^{T}Fx"$ = 0을 만족시키는 F라고 생각하시면 됩니다.  
+이 F를 fundamental matrix라고 부르며 uncalibrated camera일 때의 경우입니다. 이 matrix는 하나의 respect하는 camera의 RO에 대해 estimate할 수 있는 모든 파라미터를 설명하고, 7 DoF(=22-15)를 가집니다. 결과적으로, $x'^{T}Fx''$ = 0을 만족시키는 F라고 생각하시면 됩니다.  
 
 그러면 이제 "2개의 projection matrix가 있으면 F를 구할 수 있는가"를 생각해봅시다.  
 
@@ -157,6 +157,6 @@ Mapping을 단순화 가능하게 해서 relation results는 아래와 같습니
 + Parameters of image pairs  
 + Relative orientation  
 + Fundamental matrix F  
-  - coplanarity constraint $x'^{T}Fx"$ = 0  
+  - coplanarity constraint $x'^{T}Fx''$ = 0  
 + Essential matrix E  
-  - coplanarity constraint $^{k}x'^{T}E^{k}x"$ = 0  
+  - coplanarity constraint $^{k}x'^{T}E^{k}x''$ = 0  
