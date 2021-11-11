@@ -141,7 +141,7 @@ Essential matrix에 대한 8-Point Algorithm은 아래와 같습니다.
 
 Essential matrix E의 property는 아래와 같습니다.  
 + homogeneous  
-+ Singular $\left | E \right |$ = 0 (determinant is zero)  
++ Singular $\| E \|$ = 0 (determinant is zero)  
 + Two identical non-zero singular values
 + As a result of the skew-sym. Matrix : $2EE^{T} - tr(EE^{T})E = \underset{3\mathrm{x}3}{0}$  
 + Essential Mat.은 5 DoF를 가지기 때문에 7 DoF를 가지는 랑 달리 8-Point algorithm 말고 더 줄일 수 있다.  
@@ -171,7 +171,7 @@ Algebraic solution에 대해 구해보겠습니다. hartley와 Zisserman에 의�
 
 정리해보겠습니다.  
 + E의 SVD를 계산  
-+ U와 V를 normalize : U = U$\left | U \right |$, V = V$\left | V \right |$  
++ U와 V를 normalize : U = U $\| U \|$ , V = V $\| V \|$  
 + 4개의 solution을 계산 : <img src="/img/Direct-Solution-Fig20.jpg">  
 + test를 해서 카메라의 방향을 확인(카메라의 방향이 앞인지 뒤인지)  
 + 물리적(physically)하게 올바른 것을 return하여 해 선택  
