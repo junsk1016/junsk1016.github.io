@@ -14,7 +14,7 @@ use_math: true
 comments: true
 ---
 
-###### 분류성능 평가 지표(TP, FP, FN, TN, Precision, Recall, Accuracy)  
+###### 분류성능 평가 지표(TP, FP, FN, TN, Precision, Recall, Accuracy, IOU, AP)  
 
 Object Detection에서 가장 기본적으로 사용하는 평가지표에 대해 알아보겠습니다.
 
