@@ -19,23 +19,23 @@ comments: true
 이를 알아보기 전에 Norm과 Loss에 대해 먼저 알면 도움이 됩니다.  
 
 ### Norm  
-+ 두 벡터 혹은 벡터 하나의 크기(길이)를 측정하는 방법(함수)
++ 두 벡터 혹은 벡터 하나의 크기(길이)를 측정하는 방법(함수)  
 
-$\left\|\overrightarrow{x} \right\|_{p} := (\sum_{i=1}^{N}\left|\overrightarrow{x_i} \right|^{p})^{\frac{1}{p}}$  
+$\left\|\overrightarrow{x}\right\|_{p}$ := $(\sum_{i=1}^{N}\left|\overrightarrow{x_i}\right|^{p})^{\frac{1}{p}}$  
 
 + L1 Norm : 벡터 $\vec{p}$ , $\vec{q}$ 의 각 원소들의 차이의 절댓값의 합  
 
-$d_{1}(\vec{p},\vec{q}) = \left\|\vec{p}-\vec{q} \right\|_{1} = \sum_{i=1}^{n}\left|\vec{p_{i}}-\vec{q_{i}}\right|$  
+$d_{1}(\vec{p},\vec{q})$ = $\left\|\vec{p}-\vec{q}\right\|_{1}$ = $\sum_{i=1}^{n}\left|\vec{p_{i}}-\vec{q_{i}}\right|$  
 
 + L2 Norm : 벡터 $\vec{p}$ , $\vec{q}$ 의 유클라디안 거리(직선 거리)  
 
-$\left\|\vec{x} \right\|_{2} := \sqrt{\sum_{i=1}^{N}\left|x_{i} \right|^{2}}$  
+$\left\|\vec{x}\right\|_{2}$ := $\sqrt{\sum_{i=1}^{N}\left|x_{i}\right|^{2}}$  
 
 ### Loss  
 
 + L1 loss : 실제 값과 예측치 사이의 차이(오차)값의 절댓값들의 합  
 
-$L = \sum_{i=1}^{n}\left|y_{i}-f(x_{i}) \right|$  
+$L$ = $\sum_{i=1}^{n}\left|y_{i}-f(x_{i})\right|$  
 
   - 부르는 용어는 매우 다양함
     + Least absolute deviations, Least absolute Errors, Least absolute value, Least absolute residual, Least absoluteSum of absolute deviations  
