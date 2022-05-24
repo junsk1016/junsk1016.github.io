@@ -21,11 +21,11 @@ comments: true
 ## Loss function  
   - 하나의 input data에 대해 오차를 계산하는 함수  
   - linear regression에서, square loss  
-    + $ L(f(x_{i}||\theta, y_{i})) $ = $ (f(x_{i}||\theta - y_{i}))^{2} $  
+    + $ L(f(x_{i}|\theta, y_{i})) $ = $ (f(x_{i}|\theta - y_{i}))^{2} $  
   - SVM에서, hinge loss  
-    + $ L(f(x_{i}||\theta, y_{i})) $ = $ max(0, 1-f(x_{i}||\theta)y_{i}) $  
+    + $ L(f(x_{i}|\theta, y_{i})) $ = $ max(0, 1-f(x_{i}|\theta)y_{i}) $  
   - theorectical analysis, definition of accuracy에서, 0/1 loss  
-    + $ L(f(x_{i}||\theta, y_{i})) $ = $ 1 \Leftrightarrow f(x_{i}||\theta) \neq y_{i} $  
+    + $ L(f(x_{i}|\theta, y_{i})) $ = $ 1 \Leftrightarrow f(x_{i}|\theta) \neq y_{i} $  
 
 
 ## Cost function  
