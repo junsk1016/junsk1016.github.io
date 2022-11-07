@@ -15,7 +15,6 @@ tags:
 
 #### 이번 post는 motion estimation을 구현해보는 저장하는 문제입니다.  
 
-#### 입력의 lena파일은 512*512 size의 raw 파일입니다.  
 #### 파일 입,출력 포스팅에 있는 주석들은 생략하였습니다.  
 
 Motion Estimaton을 구현해보겠습니다. 이전 frame으로 현재 frame을 표현하는 것을 의미하는데요. 방법은 Full search와 Hexagon Search 방법이 있습니다. 이론적인 부분들 다루지 않을게요.
